@@ -42,16 +42,16 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="bg-[#f5f8f6] py-20 sm:py-24"
+      className="bg-[#F3F7F5] py-20 sm:py-24"
     >
       <div className="mx-auto max-w-[1000px] px-5 sm:px-8">
 
         <div className="text-center">
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#b4852d]">
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#9A762E]">
             FAQ
           </p>
 
-          <h2 className="mt-3 text-4xl font-black tracking-[-0.045em] text-[#063f32] sm:text-5xl">
+          <h2 className="mt-3 text-4xl font-black tracking-[-0.045em] text-[#063F32] sm:text-5xl">
             Questions, answered.
           </h2>
 
@@ -75,15 +75,15 @@ export function FAQ() {
                   className="flex w-full items-center justify-between gap-5 px-6 py-6 text-left sm:px-8"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-sm font-bold text-[#063f32] sm:text-base">
+                  <span className="text-sm font-bold text-[#063F32] sm:text-base">
                     {faq.question}
                   </span>
 
                   <span
                     className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition ${
                       isOpen
-                        ? "bg-[#063f32] text-white"
-                        : "bg-[#edf4f0] text-[#063f32]"
+                        ? "bg-[#063F32] text-white"
+                        : "bg-[#EAF2EE] text-[#063F32]"
                     }`}
                   >
                     <ChevronDown

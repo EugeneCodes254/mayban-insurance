@@ -110,12 +110,12 @@ export function QuoteForm() {
   }
 
   const inputClass =
-    "w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-sm outline-none transition placeholder:text-gray-400 focus:border-[#063f32] focus:ring-2 focus:ring-[#063f32]/10";
+    "w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-sm outline-none transition placeholder:text-gray-400 focus:border-[#063F32] focus:ring-2 focus:ring-[#063F32]/10";
 
   return (
     <div>
       {/* COVER TABS */}
-      <div className="mb-6 grid grid-cols-4 gap-1 rounded-xl bg-[#eef2ef] p-1">
+      <div className="mb-6 grid grid-cols-4 gap-1 rounded-xl bg-[#EDF3F0] p-1">
         {tabs.map((tab) => (
           <button
             key={tab}
@@ -123,8 +123,8 @@ export function QuoteForm() {
             onClick={() => changeCover(tab)}
             className={`rounded-lg px-2 py-3 text-xs font-semibold transition sm:text-sm ${
               coverType === tab
-                ? "bg-[#063f32] text-white shadow-sm"
-                : "text-gray-500 hover:text-[#063f32]"
+                ? "bg-[#063F32] text-white shadow-sm"
+                : "text-gray-500 hover:text-[#063F32]"
             }`}
           >
             {tab}
@@ -133,12 +133,12 @@ export function QuoteForm() {
       </div>
 
       {submitted ? (
-        <div className="rounded-2xl border border-[#d8eadf] bg-[#f3faf5] px-6 py-10 text-center">
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#063f32] text-white">
+        <div className="rounded-2xl border border-[#d8eadf] bg-[#F4F9F6] px-6 py-10 text-center">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#063F32] text-white">
             <CheckCircle2 size={28} />
           </div>
 
-          <h3 className="mt-5 text-xl font-black text-[#063f32]">
+          <h3 className="mt-5 text-xl font-black text-[#063F32]">
             Quote request received
           </h3>
 
@@ -151,7 +151,7 @@ export function QuoteForm() {
           <button
             type="button"
             onClick={resetForm}
-            className="mt-6 rounded-full border border-[#063f32] px-6 py-3 text-sm font-bold text-[#063f32] transition hover:bg-[#063f32] hover:text-white"
+            className="mt-6 rounded-full border border-[#063F32] px-6 py-3 text-sm font-bold text-[#063F32] transition hover:bg-[#063F32] hover:text-white"
           >
             Submit another request
           </button>
@@ -457,7 +457,7 @@ export function QuoteForm() {
           <button
             type="submit"
             disabled={loading}
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#063f32] px-6 py-4 text-sm font-black text-white transition hover:bg-[#042d24] disabled:cursor-not-allowed disabled:opacity-60"
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#063F32] px-6 py-4 text-sm font-black text-white transition hover:bg-[#03271F] disabled:cursor-not-allowed disabled:opacity-60"
           >
             {loading ? (
               <>

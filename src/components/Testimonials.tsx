@@ -30,11 +30,11 @@ export function Testimonials() {
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
 
         <div className="text-center">
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#b4852d]">
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#9A762E]">
             Client Experience
           </p>
 
-          <h2 className="mx-auto mt-3 max-w-[700px] text-4xl font-black leading-[1.05] tracking-[-0.045em] text-[#063f32] sm:text-5xl">
+          <h2 className="mx-auto mt-3 max-w-[700px] text-4xl font-black leading-[1.05] tracking-[-0.045em] text-[#063F32] sm:text-5xl">
             Trusted to protect what matters.
           </h2>
 
@@ -48,9 +48,9 @@ export function Testimonials() {
           {testimonials.map((testimonial) => (
             <article
               key={testimonial.name}
-              className="relative rounded-[28px] border border-gray-100 bg-[#f7faf8] p-7 transition hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+              className="relative rounded-[28px] border border-gray-100 bg-[#F7FAF8] p-7 transition hover:-translate-y-1 hover:bg-white hover:shadow-xl"
             >
-              <div className="absolute right-6 top-6 text-[#d8a53d]/20">
+              <div className="absolute right-6 top-6 text-[#C9A24A]/20">
                 <Quote size={42} fill="currentColor" />
               </div>
 
@@ -60,7 +60,7 @@ export function Testimonials() {
                     key={index}
                     size={15}
                     fill="currentColor"
-                    className="text-[#d7a23d]"
+                    className="text-[#C9A24A]"
                   />
                 ))}
               </div>
@@ -70,7 +70,7 @@ export function Testimonials() {
               </p>
 
               <div className="mt-7 border-t border-gray-200 pt-5">
-                <p className="text-sm font-black text-[#063f32]">
+                <p className="text-sm font-black text-[#063F32]">
                   {testimonial.name}
                 </p>
 

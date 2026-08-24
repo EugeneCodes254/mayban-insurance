@@ -6,7 +6,7 @@ import {
 
 export function Footer() {
   return (
-    <footer className="bg-[#041f19] text-white">
+    <footer className="bg-[#03271F] text-white">
 
       <div className="mx-auto max-w-[1280px] px-5 py-14 sm:px-8">
 
@@ -18,7 +18,7 @@ export function Footer() {
               href="#"
               className="inline-flex items-center gap-3"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-lg font-black text-[#063f32]">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-lg font-black text-[#063F32]">
                 M
               </div>
 
@@ -66,7 +66,7 @@ export function Footer() {
 
           {/* COMPANY */}
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#d5a23b]">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#C9A24A]">
               Company
             </p>
 
@@ -91,7 +91,7 @@ export function Footer() {
 
           {/* PRODUCTS */}
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#d5a23b]">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#C9A24A]">
               Products
             </p>
 
@@ -116,14 +116,14 @@ export function Footer() {
 
           {/* CONTACT */}
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#d5a23b]">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#C9A24A]">
               Contact
             </p>
 
             <div className="mt-5 space-y-5">
 
               <div className="flex gap-3">
-                <MapPin size={17} className="mt-0.5 shrink-0 text-[#d5a23b]" />
+                <MapPin size={17} className="mt-0.5 shrink-0 text-[#C9A24A]" />
 
                 <p className="text-sm leading-6 text-white/50">
                   Ndovu Close, Ndovu Road,
@@ -136,7 +136,7 @@ export function Footer() {
                 href="tel:+254733669260"
                 className="flex items-center gap-3 text-sm text-white/50 hover:text-white"
               >
-                <Phone size={17} className="text-[#d5a23b]" />
+                <Phone size={17} className="text-[#C9A24A]" />
                 +254 733 669 260
               </a>
 
@@ -144,7 +144,7 @@ export function Footer() {
                 href="mailto:info@maybaninsurance.com"
                 className="flex items-center gap-3 text-sm text-white/50 hover:text-white"
               >
-                <Mail size={17} className="text-[#d5a23b]" />
+                <Mail size={17} className="text-[#C9A24A]" />
                 info@maybaninsurance.com
               </a>
 

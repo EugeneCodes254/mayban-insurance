@@ -61,11 +61,11 @@ export function FindCover() {
     >
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
         <div className="max-w-[760px]">
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#b4852d]">
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#9A762E]">
             Find Cover
           </p>
 
-          <h2 className="mt-3 text-4xl font-black leading-[1.05] tracking-[-0.045em] text-[#063f32] sm:text-5xl">
+          <h2 className="mt-3 text-4xl font-black leading-[1.05] tracking-[-0.045em] text-[#063F32] sm:text-5xl">
             What matters most to you right now?
           </h2>
 
@@ -83,16 +83,16 @@ export function FindCover() {
               <a
                 key={cover.title}
                 href={`/?type=${cover.quoteType}#quote`}
-                className="group relative overflow-hidden rounded-[28px] border border-gray-100 bg-[#f7faf8] p-7 transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_25px_60px_rgba(6,63,50,0.10)]"
+                className="group relative overflow-hidden rounded-[28px] border border-gray-100 bg-[#F7FAF8] p-7 transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_25px_60px_rgba(6,63,50,0.10)]"
               >
-                <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#d6a23a]/10 transition duration-500 group-hover:scale-150" />
+                <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#C9A24A]/10 transition duration-500 group-hover:scale-150" />
 
                 <div className="relative">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#063f32] text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#063F32] text-white">
                     <Icon size={21} />
                   </div>
 
-                  <h3 className="mt-7 text-xl font-black text-[#063f32]">
+                  <h3 className="mt-7 text-xl font-black text-[#063F32]">
                     {cover.title}
                   </h3>
 
@@ -100,7 +100,7 @@ export function FindCover() {
                     {cover.description}
                   </p>
 
-                  <div className="mt-7 flex items-center gap-2 text-xs font-black text-[#063f32]">
+                  <div className="mt-7 flex items-center gap-2 text-xs font-black text-[#063F32]">
                     Get a quote
 
                     <ArrowRight

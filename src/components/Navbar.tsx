@@ -19,7 +19,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-white/95 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-[#063F32]/10 bg-white/98 backdrop-blur-xl">
       <div className="mx-auto flex h-[78px] max-w-[1280px] items-center justify-between px-5 sm:px-8">
 
         {/* LOGO */}
@@ -32,7 +32,7 @@ export function Navbar() {
           <img
             src="/images/mayban-logo.png"
             alt="Mayban Insurance"
-            className="h-[58px] w-auto object-contain"
+            className="h-[64px] w-[150px] object-contain object-left"
           />
         </a>
 
@@ -42,7 +42,7 @@ export function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="relative py-2 text-sm font-semibold text-gray-700 transition hover:text-[#0b3b2e]"
+              className="relative py-2 text-sm font-semibold text-gray-700 transition hover:text-[#063F32]"
             >
               {link.name}
             </a>
@@ -54,9 +54,9 @@ export function Navbar() {
 
           <a
             href="tel:+254733669260"
-            className="group flex items-center gap-2 text-sm font-semibold text-[#0b3b2e]"
+            className="group flex items-center gap-2 text-sm font-semibold text-[#063F32]"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#edf5f1] transition group-hover:bg-[#0b3b2e] group-hover:text-white">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#EAF4EF] transition group-hover:bg-[#063F32] group-hover:text-white">
               <Phone size={16} />
             </span>
 
@@ -65,7 +65,7 @@ export function Navbar() {
 
           <a
             href="#quote"
-            className="rounded-full bg-[#0b3b2e] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#082c23] hover:shadow-md"
+            className="rounded-full bg-[#063F32] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#042D24] hover:shadow-md"
           >
             Get a Quote
           </a>
@@ -76,7 +76,7 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((current) => !current)}
-          className="flex h-11 w-11 items-center justify-center rounded-full bg-[#f1f5f2] text-[#0b3b2e] transition hover:bg-[#e4eee8] md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F1F6F3] text-[#063F32] transition hover:bg-[#DCEBE4] md:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -99,7 +99,7 @@ export function Navbar() {
               key={link.name}
               href={link.href}
               onClick={closeMenu}
-              className="border-b border-gray-100 py-4 text-sm font-semibold text-gray-700 transition hover:text-[#0b3b2e]"
+              className="border-b border-gray-100 py-4 text-sm font-semibold text-gray-700 transition hover:text-[#063F32]"
             >
               {link.name}
             </a>
@@ -110,7 +110,7 @@ export function Navbar() {
             <a
               href="tel:+254733669260"
               onClick={closeMenu}
-              className="flex items-center justify-center gap-2 rounded-full border border-[#0b3b2e] px-4 py-3 text-sm font-bold text-[#0b3b2e]"
+              className="flex items-center justify-center gap-2 rounded-full border border-[#063F32] px-4 py-3 text-sm font-bold text-[#063F32]"
             >
               <Phone size={16} />
               Call Us
@@ -119,7 +119,7 @@ export function Navbar() {
             <a
               href="#quote"
               onClick={closeMenu}
-              className="flex items-center justify-center rounded-full bg-[#0b3b2e] px-4 py-3 text-sm font-bold text-white"
+              className="flex items-center justify-center rounded-full bg-[#063F32] px-4 py-3 text-sm font-bold text-white"
             >
               Get a Quote
             </a>

@@ -88,16 +88,16 @@ export function Products() {
   return (
     <section
       id="products"
-      className="relative overflow-hidden bg-[#061525] py-20 text-white sm:py-24"
+      className="relative overflow-hidden bg-[#063F32] py-20 text-white sm:py-24"
     >
-      <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#087e8b]/10 blur-[100px]" />
+      <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#087F6E]/10 blur-[100px]" />
 
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
 
         {/* HEADER */}
         <div className="grid gap-8 lg:grid-cols-[1fr_420px] lg:items-end">
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#d5a23b]">
+            <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#C9A24A]">
               Insurance Products
             </p>
 
@@ -128,14 +128,14 @@ export function Products() {
                   onClick={() => selectProduct(product)}
                   className={`group flex w-full items-center gap-4 rounded-2xl border p-4 text-left transition ${
                     selected
-                      ? "border-white/10 bg-white text-[#061525]"
+                      ? "border-white/10 bg-white text-[#063F32]"
                       : "border-white/5 bg-white/[0.035] text-white hover:bg-white/[0.07]"
                   }`}
                 >
                   <div
                     className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${
                       selected
-                        ? "bg-[#061525] text-[#e0ad43]"
+                        ? "bg-[#063F32] text-[#C9A24A]"
                         : "bg-white/10 text-white"
                     }`}
                   >
@@ -145,7 +145,7 @@ export function Products() {
                   <div className="min-w-0 flex-1">
                     <p
                       className={`text-sm font-black ${
-                        selected ? "text-[#061525]" : "text-white"
+                        selected ? "text-[#063F32]" : "text-white"
                       }`}
                     >
                       {product.title}
@@ -162,7 +162,7 @@ export function Products() {
 
                   <span
                     className={`text-[10px] font-black ${
-                      selected ? "text-[#b4852d]" : "text-white/20"
+                      selected ? "text-[#9A762E]" : "text-white/20"
                     }`}
                   >
                     {product.number}
@@ -173,10 +173,10 @@ export function Products() {
           </div>
 
           {/* FEATURED PRODUCT */}
-          <div className="relative min-h-[460px] overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[#0a3141] to-[#073b31] p-8 sm:p-10">
+          <div className="relative min-h-[460px] overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[#0B5142] to-[#063F32] p-8 sm:p-10">
 
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border border-white/10" />
-            <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full border border-[#d5a23b]/20" />
+            <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full border border-[#C9A24A]/20" />
 
             <div className="relative flex h-full flex-col justify-between">
 
@@ -185,7 +185,7 @@ export function Products() {
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10">
                     <active.icon
                       size={30}
-                      className="text-[#e1b24e]"
+                      className="text-[#C9A24A]"
                     />
                   </div>
 
@@ -194,7 +194,7 @@ export function Products() {
                   </span>
                 </div>
 
-                <p className="mt-10 text-[10px] font-black uppercase tracking-[0.25em] text-[#d7aa4b]">
+                <p className="mt-10 text-[10px] font-black uppercase tracking-[0.25em] text-[#C9A24A]">
                   Mayban Insurance
                 </p>
 
@@ -210,7 +210,7 @@ export function Products() {
               <div className="mt-10">
                 <a
                   href="#quote"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#d5a23b] px-6 py-3.5 text-sm font-black text-[#061525] transition hover:bg-[#e5ba61]"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#C9A24A] px-6 py-3.5 text-sm font-black text-[#063F32] transition hover:bg-[#e5ba61]"
                 >
                   Get a Quote
                   <ArrowRight size={17} />

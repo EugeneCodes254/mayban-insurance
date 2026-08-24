@@ -11,12 +11,12 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-[#061525] text-white"
+      className="relative overflow-hidden bg-[#063F32] text-white"
     >
       {/* Decorative glow */}
-      <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-[#0b8f9b]/20 blur-[100px]" />
+      <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-[#087F6E]/20 blur-[100px]" />
 
-      <div className="pointer-events-none absolute -bottom-40 left-1/3 h-[420px] w-[420px] rounded-full bg-[#d99b27]/10 blur-[100px]" />
+      <div className="pointer-events-none absolute -bottom-40 left-1/3 h-[420px] w-[420px] rounded-full bg-[#C9A24A]/10 blur-[100px]" />
 
       {/* Decorative lines */}
       <div className="pointer-events-none absolute right-[-120px] top-[80px] h-[420px] w-[650px] rounded-[50%] border border-[#1d6574]/30 rotate-[18deg]" />
@@ -34,7 +34,7 @@ export function Hero() {
 
           <h1 className="max-w-[720px] text-[48px] font-black leading-[1.02] tracking-[-0.045em] sm:text-[62px] lg:text-[70px]">
             Cover that stands with you,
-            <span className="mt-3 block bg-gradient-to-r from-[#d6a23a] via-[#f0c766] to-[#0aa8b8] bg-clip-text text-transparent">
+            <span className="mt-3 block bg-gradient-to-r from-[#C9A24A] via-[#f0c766] to-[#087F6E] bg-clip-text text-transparent">
               wherever life in Kenya takes you.
             </span>
           </h1>
@@ -48,7 +48,7 @@ export function Hero() {
           <div className="mt-9 flex flex-wrap gap-4">
             <a
               href="#quote"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d19a2e] to-[#e0b34d] px-7 py-4 text-sm font-extrabold text-[#061525] shadow-[0_12px_35px_rgba(209,154,46,0.22)] transition hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#C9A24A] to-[#D5B15A] px-7 py-4 text-sm font-extrabold text-[#063F32] shadow-[0_12px_35px_rgba(209,154,46,0.22)] transition hover:-translate-y-0.5"
             >
               Get a Quote
               <ArrowRight size={17} />
@@ -93,7 +93,7 @@ export function Hero() {
             <div className="flex items-center gap-2">
               <CheckCircle2
                 size={18}
-                className="text-[#0bb3c3]"
+                className="text-[#087F6E]"
               />
 
               <span className="text-xs text-white/55">
@@ -105,16 +105,16 @@ export function Hero() {
 
         {/* RIGHT — QUOTE CARD */}
         <div id="quote" className="relative">
-          <div className="absolute -inset-4 rounded-[38px] bg-gradient-to-br from-[#0b8f9b]/20 via-transparent to-[#d19a2e]/15 blur-2xl" />
+          <div className="absolute -inset-4 rounded-[38px] bg-gradient-to-br from-[#087F6E]/20 via-transparent to-[#C9A24A]/15 blur-2xl" />
 
-          <div className="relative rounded-[32px] border border-white/10 bg-white p-6 text-[#061525] shadow-[0_30px_90px_rgba(0,0,0,0.35)] sm:p-8">
+          <div className="relative rounded-[32px] border border-white/10 bg-white p-6 text-[#063F32] shadow-[0_30px_90px_rgba(0,0,0,0.35)] sm:p-8">
             <div className="mb-7 flex items-start justify-between gap-5">
               <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#b4852d]">
+                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#9A762E]">
                   Free Quote
                 </p>
 
-                <h2 className="mt-2 text-2xl font-black tracking-tight text-[#07372c] sm:text-3xl">
+                <h2 className="mt-2 text-2xl font-black tracking-tight text-[#063F32] sm:text-3xl">
                   Get your free quote
                 </h2>
 
@@ -123,10 +123,10 @@ export function Hero() {
                 </p>
               </div>
 
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#061525]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#063F32]">
                 <ShieldCheck
                   size={23}
-                  className="text-[#e0ad43]"
+                  className="text-[#C9A24A]"
                 />
               </div>
             </div>

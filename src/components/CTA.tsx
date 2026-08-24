@@ -10,13 +10,13 @@ export function CTA() {
   return (
     <section
       id="contact"
-      className="bg-[#063f32] py-20 text-white sm:py-24"
+      className="bg-[#063F32] py-20 text-white sm:py-24"
     >
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
 
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#d5a23b]">
+            <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#C9A24A]">
               Get in touch
             </p>
 
@@ -32,7 +32,7 @@ export function CTA() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#quote"
-                className="inline-flex items-center gap-2 rounded-full bg-[#d5a23b] px-7 py-4 text-sm font-black text-[#063f32] transition hover:bg-[#e5ba61]"
+                className="inline-flex items-center gap-2 rounded-full bg-[#C9A24A] px-7 py-4 text-sm font-black text-[#063F32] transition hover:bg-[#e5ba61]"
               >
                 Get a Quote
                 <ArrowRight size={17} />
@@ -54,7 +54,7 @@ export function CTA() {
 
             <div className="flex items-start gap-4">
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10">
-                <MapPin size={19} className="text-[#d5a23b]" />
+                <MapPin size={19} className="text-[#C9A24A]" />
               </div>
 
               <div>
@@ -73,10 +73,10 @@ export function CTA() {
 
             <a
               href="tel:+254733669260"
-              className="flex items-center gap-4 transition hover:text-[#d5a23b]"
+              className="flex items-center gap-4 transition hover:text-[#C9A24A]"
             >
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10">
-                <Phone size={19} className="text-[#d5a23b]" />
+                <Phone size={19} className="text-[#C9A24A]" />
               </div>
 
               <div>
@@ -93,10 +93,10 @@ export function CTA() {
 
             <a
               href="mailto:info@maybaninsurance.com"
-              className="flex items-center gap-4 transition hover:text-[#d5a23b]"
+              className="flex items-center gap-4 transition hover:text-[#C9A24A]"
             >
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10">
-                <Mail size={19} className="text-[#d5a23b]" />
+                <Mail size={19} className="text-[#C9A24A]" />
               </div>
 
               <div>

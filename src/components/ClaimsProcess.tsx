@@ -58,21 +58,21 @@ export function ClaimsProcess() {
   return (
     <section
       id="claims"
-      className="relative overflow-hidden bg-[#f5f8f6] py-20 sm:py-24"
+      className="relative overflow-hidden bg-[#F3F7F5] py-20 sm:py-24"
     >
-      <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-[#0a8b98]/10 blur-[90px]" />
+      <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-[#087F6E]/10 blur-[90px]" />
 
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
 
         {/* HEADER */}
         <div className="max-w-[760px]">
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#b4852d]">
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#9A762E]">
             Claims
           </p>
 
-          <h2 className="mt-3 text-4xl font-black leading-[1.05] tracking-[-0.045em] text-[#063f32] sm:text-5xl lg:text-6xl">
+          <h2 className="mt-3 text-4xl font-black leading-[1.05] tracking-[-0.045em] text-[#063F32] sm:text-5xl lg:text-6xl">
             When something goes wrong,
-            <span className="block text-[#0b8f9b]">
+            <span className="block text-[#087F6E]">
               we're here to help.
             </span>
           </h2>
@@ -97,7 +97,7 @@ export function ClaimsProcess() {
                 onClick={() => setActiveStep(index)}
                 className={`group rounded-[26px] border p-6 text-left transition duration-300 ${
                   active
-                    ? "border-[#063f32] bg-[#063f32] text-white shadow-[0_20px_50px_rgba(6,63,50,0.16)]"
+                    ? "border-[#063F32] bg-[#063F32] text-white shadow-[0_20px_50px_rgba(6,63,50,0.16)]"
                     : "border-gray-100 bg-white hover:-translate-y-1 hover:shadow-lg"
                 }`}
               >
@@ -105,8 +105,8 @@ export function ClaimsProcess() {
                   <div
                     className={`flex h-11 w-11 items-center justify-center rounded-xl ${
                       active
-                        ? "bg-white/10 text-[#e0ad43]"
-                        : "bg-[#edf5f1] text-[#063f32]"
+                        ? "bg-white/10 text-[#C9A24A]"
+                        : "bg-[#EAF4EF] text-[#063F32]"
                     }`}
                   >
                     <Icon size={20} />
@@ -123,7 +123,7 @@ export function ClaimsProcess() {
 
                 <h3
                   className={`mt-7 text-lg font-black ${
-                    active ? "text-white" : "text-[#063f32]"
+                    active ? "text-white" : "text-[#063F32]"
                   }`}
                 >
                   {step.title}
@@ -145,12 +145,12 @@ export function ClaimsProcess() {
         <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_0.85fr]">
 
           {/* DOCUMENTS */}
-          <div className="rounded-[30px] bg-[#061525] p-7 text-white sm:p-9">
+          <div className="rounded-[30px] bg-[#063F32] p-7 text-white sm:p-9">
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10">
                 <ShieldCheck
                   size={22}
-                  className="text-[#dfad48]"
+                  className="text-[#C9A24A]"
                 />
               </div>
 
@@ -180,7 +180,7 @@ export function ClaimsProcess() {
                 >
                   <CheckCircle2
                     size={16}
-                    className="shrink-0 text-[#0bb0bd]"
+                    className="shrink-0 text-[#087F6E]"
                   />
 
                   <span className="text-xs text-white/60">
@@ -193,11 +193,11 @@ export function ClaimsProcess() {
 
           {/* START CLAIM */}
           <div className="rounded-[30px] border border-gray-100 bg-white p-7 shadow-sm sm:p-9">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#eaf4ef] text-[#063f32]">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E7F2EC] text-[#063F32]">
               <Headphones size={22} />
             </div>
 
-            <h3 className="mt-6 text-2xl font-black text-[#063f32]">
+            <h3 className="mt-6 text-2xl font-black text-[#063F32]">
               Ready to start a claim?
             </h3>
 
@@ -217,7 +217,7 @@ export function ClaimsProcess() {
               id="claim-type"
               value={claimType}
               onChange={(e) => setClaimType(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-gray-200 px-4 py-3.5 text-sm outline-none focus:border-[#063f32] focus:ring-2 focus:ring-[#063f32]/10"
+              className="mt-2 w-full rounded-xl border border-gray-200 px-4 py-3.5 text-sm outline-none focus:border-[#063F32] focus:ring-2 focus:ring-[#063F32]/10"
             >
               <option value="">Select claim type</option>
 
@@ -232,7 +232,7 @@ export function ClaimsProcess() {
               href="#contact"
               className={`mt-4 flex items-center justify-center gap-2 rounded-xl px-6 py-4 text-sm font-bold transition ${
                 claimType
-                  ? "bg-[#063f32] text-white hover:bg-[#052f26]"
+                  ? "bg-[#063F32] text-white hover:bg-[#042D24]"
                   : "pointer-events-none bg-gray-100 text-gray-400"
               }`}
             >

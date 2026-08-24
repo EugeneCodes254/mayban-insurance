@@ -35,21 +35,21 @@ export function About() {
       id="about"
       className="relative scroll-mt-24 overflow-hidden bg-white py-20 sm:py-24"
     >
-      <div className="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-[#0b8f9b]/5 blur-[100px]" />
+      <div className="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-[#087F6E]/5 blur-[100px]" />
 
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
 
           {/* LEFT — COMPANY INTRODUCTION */}
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#edf5f1] px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#063f32]">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#EAF4EF] px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#063F32]">
               <ShieldCheck size={14} />
               About Mayban Insurance
             </div>
 
-            <h2 className="mt-6 max-w-[620px] text-4xl font-black leading-[1.05] tracking-[-0.045em] text-[#063f32] sm:text-5xl lg:text-6xl">
+            <h2 className="mt-6 max-w-[620px] text-4xl font-black leading-[1.05] tracking-[-0.045em] text-[#063F32] sm:text-5xl lg:text-6xl">
               Insurance built around
-              <span className="block text-[#b4852d]">
+              <span className="block text-[#9A762E]">
                 what matters to you.
               </span>
             </h2>
@@ -69,7 +69,7 @@ export function About() {
 
             <a
               href="#contact"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#063f32] px-6 py-3.5 text-sm font-black text-white transition hover:bg-[#052f26]"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#063F32] px-6 py-3.5 text-sm font-black text-white transition hover:bg-[#042D24]"
             >
               Talk to our team
               <ArrowRight size={17} />
@@ -77,14 +77,14 @@ export function About() {
           </div>
 
           {/* RIGHT — BRAND PANEL */}
-          <div className="relative overflow-hidden rounded-[32px] bg-[#061525] p-7 text-white sm:p-10">
+          <div className="relative overflow-hidden rounded-[32px] bg-[#063F32] p-7 text-white sm:p-10">
 
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border border-white/10" />
 
-            <div className="absolute -right-8 top-10 h-44 w-44 rounded-full border border-[#d5a23b]/20" />
+            <div className="absolute -right-8 top-10 h-44 w-44 rounded-full border border-[#C9A24A]/20" />
 
             <div className="relative">
-              <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#d5a23b]">
+              <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#C9A24A]">
                 Why choose Mayban
               </p>
 
@@ -108,7 +108,7 @@ export function About() {
                       key={item.label}
                       className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition hover:bg-white/[0.07]"
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-[#dfad48]">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-[#C9A24A]">
                         <Icon size={19} />
                       </div>
 
@@ -131,11 +131,11 @@ export function About() {
         <div className="mt-16 grid gap-5 border-t border-gray-100 pt-10 md:grid-cols-3">
 
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#b4852d]">
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#9A762E]">
               Our Mission
             </p>
 
-            <h3 className="mt-3 text-xl font-black text-[#063f32]">
+            <h3 className="mt-3 text-xl font-black text-[#063F32]">
               Make protection easier to understand.
             </h3>
 
@@ -146,11 +146,11 @@ export function About() {
           </div>
 
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#b4852d]">
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#9A762E]">
               Our Approach
             </p>
 
-            <h3 className="mt-3 text-xl font-black text-[#063f32]">
+            <h3 className="mt-3 text-xl font-black text-[#063F32]">
               Understand first. Recommend what fits.
             </h3>
 
@@ -162,11 +162,11 @@ export function About() {
           </div>
 
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#b4852d]">
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#9A762E]">
               Our Commitment
             </p>
 
-            <h3 className="mt-3 text-xl font-black text-[#063f32]">
+            <h3 className="mt-3 text-xl font-black text-[#063F32]">
               Be there when it matters.
             </h3>
 
