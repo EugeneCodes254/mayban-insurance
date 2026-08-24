@@ -26,13 +26,13 @@ export function Footer() {
                 <p className="text-lg font-black tracking-tight">
                   MAYBAN
                 </p>
-                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/40">
+                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/55">
                   Insurance
                 </p>
               </div>
             </a>
 
-            <p className="mt-6 max-w-[330px] text-sm leading-7 text-white/45">
+            <p className="mt-6 max-w-[330px] text-sm leading-7 text-white/65">
               Insurance solutions designed to help individuals, families
               and businesses protect what matters most.
             </p>
@@ -41,7 +41,7 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="Facebook"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/50 transition hover:bg-white/10 hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/65 transition hover:bg-white/10 hover:text-white"
               >
                 <span className="text-xs font-black">f</span>
               </a>
@@ -49,7 +49,7 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="Instagram"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/50 transition hover:bg-white/10 hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/65 transition hover:bg-white/10 hover:text-white"
               >
                 <span className="text-xs font-black">ig</span>
               </a>
@@ -57,7 +57,7 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/50 transition hover:bg-white/10 hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/65 transition hover:bg-white/10 hover:text-white"
               >
                 <span className="text-xs font-black">in</span>
               </a>
@@ -71,19 +71,19 @@ export function Footer() {
             </p>
 
             <div className="mt-5 space-y-3">
-              <a href="#about" className="block text-sm text-white/50 hover:text-white">
+              <a href="#about" className="block text-sm text-white/65 hover:text-white">
                 About Us
               </a>
 
-              <a href="#products" className="block text-sm text-white/50 hover:text-white">
+              <a href="#products" className="block text-sm text-white/65 hover:text-white">
                 Insurance Products
               </a>
 
-              <a href="#claims" className="block text-sm text-white/50 hover:text-white">
+              <a href="#claims" className="block text-sm text-white/65 hover:text-white">
                 Claims
               </a>
 
-              <a href="#faq" className="block text-sm text-white/50 hover:text-white">
+              <a href="#faq" className="block text-sm text-white/65 hover:text-white">
                 FAQs
               </a>
             </div>
@@ -96,19 +96,19 @@ export function Footer() {
             </p>
 
             <div className="mt-5 space-y-3">
-              <a href="#products" className="block text-sm text-white/50 hover:text-white">
+              <a href="#products" className="block text-sm text-white/65 hover:text-white">
                 Motor Insurance
               </a>
 
-              <a href="#products" className="block text-sm text-white/50 hover:text-white">
+              <a href="#products" className="block text-sm text-white/65 hover:text-white">
                 Health Insurance
               </a>
 
-              <a href="#products" className="block text-sm text-white/50 hover:text-white">
+              <a href="#products" className="block text-sm text-white/65 hover:text-white">
                 Life Insurance
               </a>
 
-              <a href="#products" className="block text-sm text-white/50 hover:text-white">
+              <a href="#products" className="block text-sm text-white/65 hover:text-white">
                 Business Insurance
               </a>
             </div>
@@ -125,7 +125,7 @@ export function Footer() {
               <div className="flex gap-3">
                 <MapPin size={17} className="mt-0.5 shrink-0 text-[#C9A24A]" />
 
-                <p className="text-sm leading-6 text-white/50">
+                <p className="text-sm leading-6 text-white/65">
                   Ndovu Close, Ndovu Road,
                   <br />
                   Karen, Nairobi
@@ -134,7 +134,7 @@ export function Footer() {
 
               <a
                 href="tel:+254733669260"
-                className="flex items-center gap-3 text-sm text-white/50 hover:text-white"
+                className="flex items-center gap-3 text-sm text-white/65 hover:text-white"
               >
                 <Phone size={17} className="text-[#C9A24A]" />
                 +254 733 669 260
@@ -142,7 +142,7 @@ export function Footer() {
 
               <a
                 href="mailto:info@maybaninsurance.com"
-                className="flex items-center gap-3 text-sm text-white/50 hover:text-white"
+                className="flex items-center gap-3 text-sm text-white/65 hover:text-white"
               >
                 <Mail size={17} className="text-[#C9A24A]" />
                 info@maybaninsurance.com
@@ -154,7 +154,7 @@ export function Footer() {
 
         <div className="my-10 h-px bg-white/10" />
 
-        <div className="flex flex-col gap-3 text-xs text-white/30 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} Mayban Insurance. All rights reserved.
           </p>
