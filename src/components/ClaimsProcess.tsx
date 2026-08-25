@@ -1,91 +1,59 @@
 "use client";
 
-import {
-  ArrowRight,
-  CheckCircle2,
-  FileText,
-  Headphones,
-  SearchCheck,
-  Send,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, FileText, SearchCheck, Send } from "lucide-react";
 import { useState } from "react";
 
 const steps = [
   {
     number: "01",
-    title: "Report your claim",
-    description:
-      "Notify the Mayban team as soon as possible and provide the basic details surrounding the incident.",
+    title: "Report Your Claim",
+    description: "Call our team, use the app, or visit any branch to notify us and share the basic details.",
     icon: Send,
   },
   {
     number: "02",
-    title: "Submit documents",
-    description:
-      "Provide the relevant supporting documents so our claims team can begin assessing your case.",
-    icon: FileText,
-  },
-  {
-    number: "03",
     title: "Assessment",
-    description:
-      "Our team reviews the claim, verifies the circumstances and determines the applicable settlement.",
+    description: "An assessor is assigned and reviews your claim, usually within 48 hours.",
     icon: SearchCheck,
   },
   {
-    number: "04",
-    title: "Settlement",
-    description:
-      "Once approved, your claim is processed and settlement is arranged according to your policy.",
+    number: "03",
+    title: "Approval",
+    description: "We confirm cover and approve valid claims with clear communication on the outcome.",
     icon: CheckCircle2,
   },
-];
-
-const claimTypes = [
-  "Motor claim",
-  "Health claim",
-  "Property claim",
-  "Business claim",
-  "Life claim",
-  "Other",
+  {
+    number: "04",
+    title: "Fast Payout",
+    description: "Once approved, settlement is arranged promptly according to your policy terms.",
+    icon: FileText,
+  },
 ];
 
 export function ClaimsProcess() {
   const [activeStep, setActiveStep] = useState(0);
-  const [claimType, setClaimType] = useState("");
 
   return (
-    <section
-      id="claims"
-      className="relative overflow-hidden bg-[#F3F7F5] py-20 sm:py-24"
-    >
-      <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-[#087F6E]/10 blur-[90px]" />
+    <section id="claims" className="relative overflow-hidden bg-[#092B49] py-20 text-white sm:py-24 lg:py-28">
+      <div className="pointer-events-none absolute -right-40 top-10 h-96 w-96 rounded-full border border-white/5" />
+      <div className="pointer-events-none absolute -right-16 top-32 h-52 w-52 rounded-full border border-[#17A9A1]/15" />
 
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
-
-        {/* HEADER */}
         <div className="max-w-[760px]">
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#9A762E]">
-            Claims
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#43C7BF]">
+            How It Works
           </p>
 
-          <h2 className="mt-3 text-4xl font-black leading-[1.05] tracking-[-0.045em] text-[#063F32] sm:text-5xl lg:text-6xl">
-            When something goes wrong,
-            <span className="block text-[#087F6E]">
-              we're here to help.
-            </span>
+          <h2 className="mt-4 max-w-[780px] font-serif text-4xl font-bold leading-[1.05] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
+            Claiming with us is refreshingly simple.
           </h2>
 
-          <p className="mt-5 max-w-[650px] text-base leading-7 text-gray-500">
-            We aim to make the claims process clear and straightforward,
-            giving you support from the moment you report an incident until
-            your claim is settled.
+          <p className="mt-6 max-w-[690px] text-base leading-7 text-white/60">
+            No hidden steps, no unnecessary delays — just four clear stages from reporting your claim to settlement.
           </p>
         </div>
 
-        {/* PROCESS */}
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {steps.map((step, index) => {
             const Icon = step.icon;
             const active = index === activeStep;
@@ -95,156 +63,39 @@ export function ClaimsProcess() {
                 key={step.number}
                 type="button"
                 onClick={() => setActiveStep(index)}
-                className={`group rounded-[26px] border p-6 text-left transition duration-300 ${
-                  active
-                    ? "border-[#063F32] bg-[#063F32] text-white shadow-[0_20px_50px_rgba(6,63,50,0.16)]"
-                    : "border-gray-100 bg-white hover:-translate-y-1 hover:shadow-lg"
-                }`}
+                className="group text-left"
               >
-                <div className="flex items-start justify-between">
-                  <div
-                    className={`flex h-11 w-11 items-center justify-center rounded-xl ${
-                      active
-                        ? "bg-white/10 text-[#C9A24A]"
-                        : "bg-[#EAF4EF] text-[#063F32]"
-                    }`}
-                  >
-                    <Icon size={20} />
-                  </div>
-
-                  <span
-                    className={`text-xs font-black ${
-                      active ? "text-white/30" : "text-gray-200"
-                    }`}
-                  >
+                <div className="flex items-center justify-between border-b border-white/10 pb-5">
+                  <span className={`font-serif text-4xl font-bold transition ${active ? "text-white/80" : "text-white/20 group-hover:text-white/40"}`}>
                     {step.number}
                   </span>
+                  <Icon size={20} className={active ? "text-[#43C7BF]" : "text-white/20 group-hover:text-[#43C7BF]"} />
                 </div>
 
-                <h3
-                  className={`mt-7 text-lg font-black ${
-                    active ? "text-white" : "text-[#063F32]"
-                  }`}
-                >
+                <h3 className={`mt-6 text-lg font-black transition ${active ? "text-white" : "text-white/80"}`}>
                   {step.title}
                 </h3>
 
-                <p
-                  className={`mt-3 text-sm leading-6 ${
-                    active ? "text-white/60" : "text-gray-500"
-                  }`}
-                >
+                <p className="mt-3 text-sm leading-6 text-white/50">
                   {step.description}
                 </p>
+
+                <div className={`mt-7 h-1 rounded-full transition-all duration-300 ${active ? "w-16 bg-[#17A9A1]" : "w-8 bg-white/10 group-hover:w-12 group-hover:bg-[#17A9A1]/60"}`} />
               </button>
             );
           })}
         </div>
 
-        {/* BOTTOM PANEL */}
-        <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_0.85fr]">
-
-          {/* DOCUMENTS */}
-          <div className="rounded-[30px] bg-[#063F32] p-7 text-white sm:p-9">
-            <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10">
-                <ShieldCheck
-                  size={22}
-                  className="text-[#C9A24A]"
-                />
-              </div>
-
-              <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#d6a23c]">
-                  Before you submit
-                </p>
-
-                <h3 className="mt-2 text-2xl font-black">
-                  Have your documents ready
-                </h3>
-              </div>
-            </div>
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {[
-                "Policy or certificate details",
-                "National ID or identification",
-                "Incident details",
-                "Relevant photographs",
-                "Police abstract where applicable",
-                "Invoices or supporting documents",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3"
-                >
-                  <CheckCircle2
-                    size={16}
-                    className="shrink-0 text-[#087F6E]"
-                  />
-
-                  <span className="text-xs text-white/60">
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </div>
+        <div className="mt-14 flex flex-col gap-5 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm font-bold">Need help with a claim?</p>
+            <p className="mt-1 text-sm text-white/45">Our team is ready to guide you through the next step.</p>
           </div>
 
-          {/* START CLAIM */}
-          <div className="rounded-[30px] border border-gray-100 bg-white p-7 shadow-sm sm:p-9">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E7F2EC] text-[#063F32]">
-              <Headphones size={22} />
-            </div>
-
-            <h3 className="mt-6 text-2xl font-black text-[#063F32]">
-              Ready to start a claim?
-            </h3>
-
-            <p className="mt-3 text-sm leading-6 text-gray-500">
-              Select the type of claim and our team can guide you through
-              the next steps.
-            </p>
-
-            <label
-              htmlFor="claim-type"
-              className="mt-6 block text-xs font-bold text-gray-700"
-            >
-              Claim type
-            </label>
-
-            <select
-              id="claim-type"
-              value={claimType}
-              onChange={(e) => setClaimType(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-gray-200 px-4 py-3.5 text-sm outline-none focus:border-[#063F32] focus:ring-2 focus:ring-[#063F32]/10"
-            >
-              <option value="">Select claim type</option>
-
-              {claimTypes.map((type) => (
-                <option key={type} value={type}>
-                  {type}
-                </option>
-              ))}
-            </select>
-
-            <a
-              href="#contact"
-              className={`mt-4 flex items-center justify-center gap-2 rounded-xl px-6 py-4 text-sm font-bold transition ${
-                claimType
-                  ? "bg-[#063F32] text-white hover:bg-[#042D24]"
-                  : "pointer-events-none bg-gray-100 text-gray-400"
-              }`}
-            >
-              Start My Claim
-              <ArrowRight size={17} />
-            </a>
-
-            <p className="mt-4 flex items-center justify-center gap-2 text-center text-[11px] text-gray-400">
-              <Headphones size={13} />
-              Our team is ready to assist.
-            </p>
-          </div>
+          <a href="#contact" className="inline-flex items-center gap-2 self-start rounded-full bg-[#17A9A1] px-6 py-3.5 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-[#20b7ae]">
+            Talk to our team
+            <ArrowRight size={17} />
+          </a>
         </div>
       </div>
     </section>
