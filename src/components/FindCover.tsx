@@ -55,60 +55,52 @@ const covers = [
 
 export function FindCover() {
   return (
-    <section
-      id="find-cover"
-      className="bg-white py-20 sm:py-24"
-    >
+    <section id="find-cover" className="bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
-        <div className="max-w-[760px]">
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#9A762E]">
+        <div className="max-w-[680px]">
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#0FA79C]">
             Find Cover
           </p>
-
-          <h2 className="mt-3 text-4xl font-black leading-[1.05] tracking-[-0.045em] text-[#063F32] sm:text-5xl">
+          <h2 className="mt-4 max-w-[620px] text-4xl font-serif font-bold leading-[1.08] tracking-[-0.035em] text-[#092B46] sm:text-5xl">
             What matters most to you right now?
           </h2>
-
-          <p className="mt-5 max-w-[650px] text-base leading-7 text-gray-500">
-            We group our cover around real life moments, not paperwork
-            categories — so it's easy to find what fits.
+          <p className="mt-5 max-w-[650px] text-[15px] leading-7 text-[#647487]">
+            We group our cover around real life moments, not paperwork categories
+            — so it&apos;s easy to find what fits.
           </p>
         </div>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {covers.map((cover) => {
+          {covers.map((cover, index) => {
             const Icon = cover.icon;
+            const featured = index === 0;
 
             return (
               <a
                 key={cover.title}
                 href={`/?type=${cover.quoteType}#quote`}
-                className="group relative overflow-hidden rounded-[28px] border border-gray-100 bg-[#F7FAF8] p-7 transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_25px_60px_rgba(6,63,50,0.10)]"
+                className={`group relative min-h-[142px] overflow-hidden rounded-xl border p-6 transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(9,43,70,0.09)] ${
+                  featured
+                    ? "border-[#27B9B0] bg-[#EAF8F7]"
+                    : "border-[#E7ECEF] bg-[#F7F9FA] hover:border-[#B7DCD9] hover:bg-white"
+                }`}
               >
-                <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#C9A24A]/10 transition duration-500 group-hover:scale-150" />
-
-                <div className="relative">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#063F32] text-white">
-                    <Icon size={21} />
-                  </div>
-
-                  <h3 className="mt-7 text-xl font-black text-[#063F32]">
-                    {cover.title}
-                  </h3>
-
-                  <p className="mt-3 max-w-[300px] text-sm leading-6 text-gray-500">
-                    {cover.description}
-                  </p>
-
-                  <div className="mt-7 flex items-center gap-2 text-xs font-black text-[#063F32]">
-                    Get a quote
-
-                    <ArrowRight
-                      size={15}
-                      className="transition-transform group-hover:translate-x-1"
-                    />
-                  </div>
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#092B46] text-white">
+                  <Icon size={17} strokeWidth={2.1} />
                 </div>
+
+                <h3 className="mt-4 text-[15px] font-bold text-[#092B46]">
+                  {cover.title}
+                </h3>
+
+                <p className="mt-2 max-w-[330px] text-xs leading-5 text-[#66788A]">
+                  {cover.description}
+                </p>
+
+                <ArrowRight
+                  size={15}
+                  className="absolute bottom-5 right-5 text-[#0FA79C] opacity-0 transition group-hover:translate-x-1 group-hover:opacity-100"
+                />
               </a>
             );
           })}
