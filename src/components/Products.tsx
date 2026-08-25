@@ -33,7 +33,7 @@ const products = [
   {
     title: "Life Insurance",
     description:
-      "Term life, endowment and education plans that secure your family&apos;s tomorrow, today.",
+      "Term life, endowment and education plans that secure your family's tomorrow, today.",
     icon: LifeBuoy,
     image:
       "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=900&q=80",
@@ -53,7 +53,7 @@ const products = [
   {
     title: "Marine Insurance",
     description:
-      "Cargo and hull cover for imports, exports and vessels, including the cover required under Kenya&apos;s Marine Insurance Act.",
+      "Cargo and hull cover for imports, exports and vessels, including the cover required under Kenya's Marine Insurance Act.",
     icon: Ship,
     image:
       "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=80",
@@ -73,7 +73,7 @@ const products = [
   {
     title: "Advance Payment Guarantee",
     description:
-      "Protects clients who make upfront payments to contractors or suppliers, guaranteeing a refund if obligations aren&apos;t met.",
+      "Protects clients who make upfront payments to contractors or suppliers, guaranteeing a refund if obligations aren't met.",
     icon: HandCoins,
     image:
       "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80",
