@@ -34,13 +34,13 @@ export function ClaimsProcess() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section id="claims" className="relative overflow-hidden bg-[#092B49] py-20 text-white sm:py-24 lg:py-28">
+    <section id="claims" className="relative overflow-hidden bg-[#063F32] py-20 text-white sm:py-24 lg:py-28">
       <div className="pointer-events-none absolute -right-40 top-10 h-96 w-96 rounded-full border border-white/5" />
-      <div className="pointer-events-none absolute -right-16 top-32 h-52 w-52 rounded-full border border-[#17A9A1]/15" />
+      <div className="pointer-events-none absolute -right-16 top-32 h-52 w-52 rounded-full border border-[#C9A24A]/15" />
 
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
         <div className="max-w-[760px]">
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#43C7BF]">
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#E3C66B]">
             How It Works
           </p>
 
@@ -69,7 +69,7 @@ export function ClaimsProcess() {
                   <span className={`font-serif text-4xl font-bold transition ${active ? "text-white/80" : "text-white/20 group-hover:text-white/40"}`}>
                     {step.number}
                   </span>
-                  <Icon size={20} className={active ? "text-[#43C7BF]" : "text-white/20 group-hover:text-[#43C7BF]"} />
+                  <Icon size={20} className={active ? "text-[#E3C66B]" : "text-white/20 group-hover:text-[#E3C66B]"} />
                 </div>
 
                 <h3 className={`mt-6 text-lg font-black transition ${active ? "text-white" : "text-white/80"}`}>
@@ -80,7 +80,7 @@ export function ClaimsProcess() {
                   {step.description}
                 </p>
 
-                <div className={`mt-7 h-1 rounded-full transition-all duration-300 ${active ? "w-16 bg-[#17A9A1]" : "w-8 bg-white/10 group-hover:w-12 group-hover:bg-[#17A9A1]/60"}`} />
+                <div className={`mt-7 h-1 rounded-full transition-all duration-300 ${active ? "w-16 bg-[#C9A24A]" : "w-8 bg-white/10 group-hover:w-12 group-hover:bg-[#C9A24A]/60"}`} />
               </button>
             );
           })}
@@ -92,7 +92,7 @@ export function ClaimsProcess() {
             <p className="mt-1 text-sm text-white/45">Our team is ready to guide you through the next step.</p>
           </div>
 
-          <a href="#contact" className="inline-flex items-center gap-2 self-start rounded-full bg-[#17A9A1] px-6 py-3.5 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-[#20b7ae]">
+          <a href="#contact" className="inline-flex items-center gap-2 self-start rounded-full bg-[#C9A24A] px-6 py-3.5 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-[#20b7ae]">
             Talk to our team
             <ArrowRight size={17} />
           </a>
