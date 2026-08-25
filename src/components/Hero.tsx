@@ -9,15 +9,15 @@ import { QuoteForm } from "./QuoteForm";
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-[#082640] text-white">
-      <div className="pointer-events-none absolute -right-44 -top-44 h-[620px] w-[620px] rounded-full bg-[#10A7A0]/12 blur-[110px]" />
-      <div className="pointer-events-none absolute -bottom-52 left-1/3 h-[520px] w-[520px] rounded-full bg-[#10A7A0]/8 blur-[110px]" />
+    <section id="home" className="relative overflow-hidden bg-[#063F32] text-white">
+      <div className="pointer-events-none absolute -right-44 -top-44 h-[620px] w-[620px] rounded-full bg-[#C9A24A]/12 blur-[110px]" />
+      <div className="pointer-events-none absolute -bottom-52 left-1/3 h-[520px] w-[520px] rounded-full bg-[#C9A24A]/8 blur-[110px]" />
       <div className="pointer-events-none absolute right-[-180px] top-[120px] h-[460px] w-[700px] rounded-[50%] border border-white/10 rotate-[16deg]" />
-      <div className="pointer-events-none absolute right-[-230px] top-[175px] h-[460px] w-[700px] rounded-[50%] border border-[#10A7A0]/20 rotate-[16deg]" />
+      <div className="pointer-events-none absolute right-[-230px] top-[175px] h-[460px] w-[700px] rounded-[50%] border border-[#C9A24A]/20 rotate-[16deg]" />
 
       <div className="relative mx-auto grid max-w-[1280px] gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:gap-16 lg:py-[82px]">
         <div className="max-w-[700px]">
-          <div className="mb-7 inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.25em] text-[#54d4cb]">
+          <div className="mb-7 inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.25em] text-[#E3C66B]">
             <ShieldCheck size={15} />
             IRA Licensed Insurance Agency
           </div>
@@ -29,7 +29,7 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="mt-7 max-w-[610px] text-[15px] leading-7 text-white/70 sm:text-[17px] sm:leading-8">
+          <p className="mt-7 max-w-[610px] text-[15px] leading-7 text-white/75 sm:text-[17px] sm:leading-8">
             Motor, health, life and business insurance built for Kenyan
             families and enterprises — straightforward policies, responsive
             claims, and support that speaks your language.
@@ -38,7 +38,7 @@ export function Hero() {
           <div className="mt-9 flex flex-wrap gap-4">
             <a
               href="#quote"
-              className="inline-flex items-center gap-2 rounded-full bg-[#10A7A0] px-7 py-4 text-sm font-extrabold text-white shadow-[0_14px_35px_rgba(16,167,160,0.24)] transition hover:-translate-y-0.5 hover:bg-[#0d948e]"
+              className="inline-flex items-center gap-2 rounded-full bg-[#C9A24A] px-7 py-4 text-sm font-extrabold text-white shadow-[0_14px_35px_rgba(201,162,74,0.24)] transition hover:-translate-y-0.5 hover:bg-[#B88E35]"
             >
               Explore Cover
               <ArrowRight size={17} />
@@ -56,36 +56,36 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5 border-t border-white/10 pt-7">
             <div>
               <p className="text-lg font-black text-white">7+</p>
-              <p className="mt-1 text-[11px] text-white/50">Insurance solutions</p>
+              <p className="mt-1 text-[11px] text-white/55">Insurance solutions</p>
             </div>
 
             <div>
               <p className="text-lg font-black text-white">24/7</p>
-              <p className="mt-1 text-[11px] text-white/50">Claims support</p>
+              <p className="mt-1 text-[11px] text-white/55">Claims support</p>
             </div>
 
             <div>
               <p className="text-lg font-black text-white">Kenya</p>
-              <p className="mt-1 text-[11px] text-white/50">Nationwide coverage</p>
+              <p className="mt-1 text-[11px] text-white/55">Nationwide coverage</p>
             </div>
 
-            <div className="flex items-center gap-2 text-[11px] text-white/60">
-              <CheckCircle2 size={17} className="text-[#10A7A0]" />
+            <div className="flex items-center gap-2 text-[11px] text-white/65">
+              <CheckCircle2 size={17} className="text-[#C9A24A]" />
               M-Pesa premium payments
             </div>
           </div>
         </div>
 
         <div id="quote" className="relative lg:ml-auto lg:w-full lg:max-w-[500px]">
-          <div className="absolute -inset-5 rounded-[38px] bg-[#10A7A0]/10 blur-2xl" />
+          <div className="absolute -inset-5 rounded-[38px] bg-[#C9A24A]/10 blur-2xl" />
 
-          <div className="relative rounded-[14px] border border-slate-200/80 bg-white p-6 text-[#082640] shadow-[0_30px_80px_rgba(0,0,0,0.25)] sm:p-7">
+          <div className="relative rounded-[28px] border border-[#E5E0D2] bg-white p-6 text-[#063F32] shadow-[0_30px_80px_rgba(3,39,31,0.22)] sm:p-7">
             <div className="mb-6 flex items-start justify-between gap-5">
               <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#10A7A0]">
+                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#C9A24A]">
                   Free Quote
                 </p>
-                <h2 className="mt-2 font-serif text-[28px] font-bold tracking-tight text-[#082640] sm:text-[31px]">
+                <h2 className="mt-2 font-serif text-[28px] font-bold tracking-tight text-[#063F32] sm:text-[31px]">
                   Get your free quote
                 </h2>
                 <p className="mt-1.5 text-xs leading-5 text-slate-500">
@@ -93,8 +93,8 @@ export function Hero() {
                 </p>
               </div>
 
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#082640]">
-                <ShieldCheck size={21} className="text-[#10A7A0]" />
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#063F32]">
+                <ShieldCheck size={21} className="text-[#C9A24A]" />
               </div>
             </div>
 

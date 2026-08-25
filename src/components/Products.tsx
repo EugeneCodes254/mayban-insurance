@@ -84,22 +84,22 @@ const products = [
 
 export function Products() {
   return (
-    <section id="products" className="bg-[#F5F7F8] py-20 sm:py-24">
+    <section id="products" className="bg-[#F8F7F3] py-20 sm:py-24">
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
-        <div className="mx-auto max-w-[760px] text-center">
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#0FA79C]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#C9A24A]">
             Our Cover
           </p>
-          <h2 className="mt-4 text-4xl font-serif font-bold leading-[1.08] tracking-[-0.035em] text-[#092B46] sm:text-5xl">
+          <h2 className="mt-4 text-4xl font-serif font-bold leading-[1.06] tracking-[-0.04em] text-[#063F32] sm:text-5xl lg:text-[56px]">
             Insurance built around you
           </h2>
-          <p className="mt-4 text-[15px] leading-7 text-[#647487]">
+          <p className="mx-auto mt-5 max-w-[620px] text-[15px] leading-7 text-[#68736E]">
             Our core lines of cover, each designed to be simple to understand
             and quick to claim on.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => {
             const Icon = product.icon;
 
@@ -107,29 +107,29 @@ export function Products() {
               <a
                 key={product.title}
                 href={product.href}
-                className="group overflow-hidden rounded-xl border border-[#E2E7EA] bg-white shadow-[0_4px_16px_rgba(9,43,70,0.03)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(9,43,70,0.10)]"
+                className="group overflow-hidden rounded-[24px] border border-[#E6E2D8] bg-white shadow-[0_8px_25px_rgba(6,63,50,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(6,63,50,0.12)]"
               >
-                <div className="relative h-[150px] overflow-hidden bg-[#DDE8E7]">
+                <div className="relative h-[205px] overflow-hidden bg-[#E9E5D9]">
                   <img
                     src={product.image}
                     alt=""
                     loading="lazy"
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#092B46]/30 to-transparent" />
-                  <div className="absolute bottom-4 left-4 flex h-9 w-9 items-center justify-center rounded-lg bg-[#092B46]/95 text-white">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#063F32]/55 via-[#063F32]/10 to-transparent" />
+                  <div className="absolute bottom-4 left-4 flex h-9 w-9 items-center justify-center rounded-xl bg-[#063F32] text-white shadow-lg">
                     <Icon size={17} />
                   </div>
                 </div>
 
-                <div className="p-5">
-                  <h3 className="text-[17px] font-serif font-bold leading-tight text-[#092B46]">
+                <div className="p-6">
+                  <h3 className="text-[20px] font-serif font-bold leading-tight text-[#063F32]">
                     {product.title}
                   </h3>
-                  <p className="mt-3 text-xs leading-5 text-[#66788A]">
+                  <p className="mt-3 text-xs leading-5 text-[#68736E]">
                     {product.description}
                   </p>
-                  <div className="mt-5 flex items-center gap-1.5 text-[11px] font-black text-[#0FA79C]">
+                  <div className="mt-5 flex items-center gap-1.5 text-[11px] font-black text-[#C9A24A]">
                     {product.link}
                     <ArrowRight
                       size={14}
