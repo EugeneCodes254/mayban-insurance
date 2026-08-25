@@ -16,20 +16,14 @@ export function Footer() {
           <div>
             <a
               href="#"
-              className="inline-flex items-center gap-3"
+              className="inline-flex items-center"
+              aria-label="Mayban Insurance home"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-lg font-black text-[#063F32]">
-                M
-              </div>
-
-              <div>
-                <p className="text-lg font-black tracking-tight">
-                  MAYBAN
-                </p>
-                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/55">
-                  Insurance
-                </p>
-              </div>
+              <img
+                src="/images/mayban-logo.png"
+                alt="Mayban Insurance"
+                className="h-[90px] w-auto object-contain"
+              />
             </a>
 
             <p className="mt-6 max-w-[330px] text-sm leading-7 text-white/65">
@@ -141,11 +135,11 @@ export function Footer() {
               </a>
 
               <a
-                href="mailto:info@maybaninsurance.com"
+                href="mailto:info@maybaninsurance.co.ke"
                 className="flex items-center gap-3 text-sm text-white/65 hover:text-white"
               >
                 <Mail size={17} className="text-[#C9A24A]" />
-                info@maybaninsurance.com
+                info@maybaninsurance.co.ke
               </a>
 
             </div>

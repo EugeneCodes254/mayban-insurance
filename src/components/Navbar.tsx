@@ -20,7 +20,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#063F32]/10 bg-white/98 backdrop-blur-xl">
-      <div className="mx-auto flex h-[78px] max-w-[1280px] items-center justify-between px-5 sm:px-8">
+      <div className="mx-auto flex h-[94px] max-w-[1280px] items-center justify-between px-5 sm:px-8">
 
         {/* LOGO */}
         <a
@@ -32,7 +32,7 @@ export function Navbar() {
           <img
             src="/images/mayban-logo.png"
             alt="Mayban Insurance"
-            className="h-[64px] w-[150px] object-contain object-left"
+            className="h-[76px] w-auto object-contain object-left"
           />
         </a>
 
