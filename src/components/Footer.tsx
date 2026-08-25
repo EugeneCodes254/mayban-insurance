@@ -135,11 +135,11 @@ export function Footer() {
               </a>
 
               <a
-                href="mailto:info@maybaninsurance.co.ke"
+                href="mailto:info@maybaninsurance.com"
                 className="flex items-center gap-3 text-sm text-white/65 hover:text-white"
               >
                 <Mail size={17} className="text-[#C9A24A]" />
-                info@maybaninsurance.co.ke
+                info@maybaninsurance.com
               </a>
 
             </div>
