@@ -66,7 +66,7 @@ export async function POST(request: Request) {
       .join("");
 
     const { error } = await resend.emails.send({
-      from: "Mayban Website <onboarding@resend.dev>",
+      from: "Mayban Insurance <info@maybaninsurance.com>",
       to: ["info@maybaninsurance.com"],
       replyTo: email,
       subject: `New ${coverType} Quote Request - ${name}`,
