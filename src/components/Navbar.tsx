@@ -1,116 +1,106 @@
 "use client";
 
-import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
+import { Menu, X, Phone, ArrowRight } from "lucide-react";
 
 const links = [
-  { name: "Products", href: "#products" },
-  { name: "Why Us", href: "#about" },
-  { name: "Claims", href: "#claims" },
-  { name: "FAQs", href: "#faqs" },
-  { name: "Contact", href: "#contact" },
+  { label: "Home", href: "#home" },
+  { label: "About Us", href: "#about" },
+  { label: "Our Covers", href: "#products" },
+  { label: "Claims", href: "#claims" },
+  { label: "FAQs", href: "#faq" },
 ];
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
-  function closeMenu() {
-    setOpen(false);
-  }
+  const closeMenu = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#082640] text-white shadow-[0_8px_30px_rgba(4,25,43,0.12)]">
-      <div className="mx-auto flex h-[82px] max-w-[1280px] items-center justify-between px-5 sm:px-8">
-        <a
-          href="#"
-          onClick={closeMenu}
-          className="flex shrink-0 items-center"
-          aria-label="Mayban Insurance home"
-        >
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
+      <div className="mx-auto flex h-[78px] max-w-[1280px] items-center justify-between px-5 sm:px-8">
+        <a href="#home" onClick={closeMenu} className="flex items-center">
           <img
             src="/images/mayban-logo.png"
             alt="Mayban Insurance"
-            className="h-[62px] w-auto object-contain object-left"
+            className="h-[52px] w-auto object-contain"
           />
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {links.map((link) => (
             <a
-              key={link.name}
+              key={link.href}
               href={link.href}
-              className="relative py-2 text-[13px] font-semibold text-white/85 transition hover:text-white"
+              className="text-sm font-semibold text-slate-700 transition hover:text-[#0B7F78]"
             >
-              {link.name}
+              {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           <a
             href="tel:+254733669260"
-            className="flex items-center gap-2 text-[13px] font-semibold text-white/90 transition hover:text-white"
+            className="flex items-center gap-2 text-sm font-semibold text-slate-700"
           >
-            <Phone size={15} />
+            <Phone size={16} className="text-[#0B7F78]" />
             +254 733 669 260
           </a>
 
           <a
             href="#quote"
-            className="rounded-full bg-[#10A7A0] px-6 py-3 text-[13px] font-extrabold text-white shadow-[0_10px_25px_rgba(16,167,160,0.22)] transition hover:-translate-y-0.5 hover:bg-[#0d948e]"
+            className="inline-flex items-center gap-2 rounded-full bg-[#0B7F78] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#086b65]"
           >
             Get a Quote
+            <ArrowRight size={16} />
           </a>
         </div>
 
         <button
           type="button"
-          onClick={() => setOpen((current) => !current)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10 md:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-700 lg:hidden"
         >
           {open ? <X size={21} /> : <Menu size={21} />}
         </button>
       </div>
 
-      <div
-        className={`overflow-hidden border-t border-white/10 bg-[#082640] transition-all duration-300 md:hidden ${
-          open ? "max-h-[520px] opacity-100" : "max-h-0 border-t-0 opacity-0"
-        }`}
-      >
-        <nav className="mx-auto flex max-w-[1280px] flex-col px-5 pb-6 sm:px-8">
-          {links.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={closeMenu}
-              className="border-b border-white/10 py-4 text-sm font-semibold text-white/85 transition hover:text-white"
-            >
-              {link.name}
-            </a>
-          ))}
+      {open && (
+        <div className="border-t border-slate-100 bg-white lg:hidden">
+          <nav className="mx-auto flex max-w-[1280px] flex-col px-5 py-4 sm:px-8">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={closeMenu}
+                className="border-b border-slate-100 py-4 text-sm font-semibold text-slate-700"
+              >
+                {link.label}
+              </a>
+            ))}
 
-          <div className="mt-5 grid grid-cols-2 gap-3">
             <a
               href="tel:+254733669260"
               onClick={closeMenu}
-              className="flex items-center justify-center gap-2 rounded-full border border-white/25 px-4 py-3 text-sm font-bold text-white"
+              className="mt-4 flex items-center gap-2 py-3 text-sm font-semibold text-slate-700"
             >
-              <Phone size={16} />
-              Call Us
+              <Phone size={16} className="text-[#0B7F78]" />
+              +254 733 669 260
             </a>
 
             <a
               href="#quote"
               onClick={closeMenu}
-              className="flex items-center justify-center rounded-full bg-[#10A7A0] px-4 py-3 text-sm font-bold text-white"
+              className="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#0B7F78] px-5 py-3.5 text-sm font-bold text-white"
             >
               Get a Quote
+              <ArrowRight size={16} />
             </a>
-          </div>
-        </nav>
-      </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
