@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ArrowRight,
   Car,
@@ -10,215 +8,138 @@ import {
   FileCheck2,
   HandCoins,
 } from "lucide-react";
-import { useState } from "react";
 
 const products = [
   {
-    id: "motor",
     title: "Motor Insurance",
-    short: "Protect your vehicle",
     description:
-      "Comprehensive protection for your private or commercial vehicle against accidents, theft and other unexpected risks.",
+      "Comprehensive and third-party cover with 24/7 roadside assistance and a nationwide garage network.",
     icon: Car,
-    number: "01",
+    image:
+      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80",
+    href: "/?type=Motor#quote",
+    link: "Explore Motor Cover",
   },
   {
-    id: "health",
     title: "Health Insurance",
-    short: "Protect your health",
     description:
-      "Flexible medical protection designed to help you access quality healthcare while protecting your finances.",
+      "Individual and family medical cover including inpatient, outpatient, maternity and dental.",
     icon: HeartPulse,
-    number: "02",
+    image:
+      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80",
+    href: "/?type=Health#quote",
+    link: "Explore Health Cover",
   },
   {
-    id: "life",
     title: "Life Insurance",
-    short: "Protect your family",
     description:
-      "Financial protection that helps secure the people who depend on you and plan confidently for the future.",
+      "Term life, endowment and education plans that secure your family&apos;s tomorrow, today.",
     icon: LifeBuoy,
-    number: "03",
+    image:
+      "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=900&q=80",
+    href: "/?type=Life#quote",
+    link: "Explore Life Cover",
   },
   {
-    id: "property",
     title: "Property & Business",
-    short: "Protect what you've built",
     description:
-      "Insurance solutions for homes, commercial property, businesses, assets and operational risks.",
+      "Fire, theft, liability and business interruption cover for SMEs and enterprises.",
     icon: Building2,
-    number: "04",
+    image:
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+    href: "/?type=Business#quote",
+    link: "Explore Business Cover",
   },
   {
-    id: "marine",
     title: "Marine Insurance",
-    short: "Protect your cargo",
     description:
-      "Protection for goods and cargo transported by sea, air or land against covered transit risks.",
+      "Cargo and hull cover for imports, exports and vessels, including the cover required under Kenya&apos;s Marine Insurance Act.",
     icon: Ship,
-    number: "05",
+    image:
+      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=80",
+    href: "/?type=Business#quote",
+    link: "Explore Marine Cover",
   },
   {
-    id: "performance",
     title: "Performance Bond",
-    short: "Secure your obligations",
     description:
-      "Support your contractual commitments with guarantees designed to provide confidence to your business partners.",
+      "A guarantee that protects clients if a contractor fails to fulfil their obligations on a contracted project.",
     icon: FileCheck2,
-    number: "06",
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80",
+    href: "/?type=Business#quote",
+    link: "Explore Performance Bonds",
   },
   {
-    id: "advance",
     title: "Advance Payment Guarantee",
-    short: "Protect advance payments",
     description:
-      "A guarantee that provides security around advance payments made under qualifying contracts.",
+      "Protects clients who make upfront payments to contractors or suppliers, guaranteeing a refund if obligations aren&apos;t met.",
     icon: HandCoins,
-    number: "07",
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80",
+    href: "/?type=Business#quote",
+    link: "Explore Payment Guarantees",
   },
 ];
 
 export function Products() {
-  const [active, setActive] = useState(products[0]);
-
-  function selectProduct(product: (typeof products)[number]) {
-    setActive(product);
-  }
-
   return (
-    <section
-      id="products"
-      className="relative overflow-hidden bg-[#063F32] py-20 text-white sm:py-24"
-    >
-      <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#087F6E]/10 blur-[100px]" />
-
+    <section id="products" className="bg-[#F5F7F8] py-20 sm:py-24">
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
-
-        {/* HEADER */}
-        <div className="grid gap-8 lg:grid-cols-[1fr_420px] lg:items-end">
-          <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#C9A24A]">
-              Insurance Products
-            </p>
-
-            <h2 className="mt-3 max-w-[760px] text-4xl font-black leading-[1.05] tracking-[-0.045em] sm:text-5xl lg:text-6xl">
-              Protection for every part of your life.
-            </h2>
-          </div>
-
-          <p className="text-sm leading-7 text-white/55 lg:pb-1">
-            From everyday essentials to complex business risks, our insurance
-            solutions are designed to help you protect what matters.
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#0FA79C]">
+            Our Cover
+          </p>
+          <h2 className="mt-4 text-4xl font-serif font-bold leading-[1.08] tracking-[-0.035em] text-[#092B46] sm:text-5xl">
+            Insurance built around you
+          </h2>
+          <p className="mt-4 text-[15px] leading-7 text-[#647487]">
+            Our core lines of cover, each designed to be simple to understand
+            and quick to claim on.
           </p>
         </div>
 
-        {/* PRODUCT SELECTOR */}
-        <div className="mt-12 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {products.map((product) => {
+            const Icon = product.icon;
 
-          {/* PRODUCT LIST */}
-          <div className="space-y-2">
-            {products.map((product) => {
-              const Icon = product.icon;
-              const selected = active.id === product.id;
-
-              return (
-                <button
-                  key={product.id}
-                  type="button"
-                  onClick={() => selectProduct(product)}
-                  className={`group flex w-full items-center gap-4 rounded-2xl border p-4 text-left transition ${
-                    selected
-                      ? "border-white/10 bg-white text-[#063F32]"
-                      : "border-white/5 bg-white/[0.035] text-white hover:bg-white/[0.07]"
-                  }`}
-                >
-                  <div
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${
-                      selected
-                        ? "bg-[#063F32] text-[#C9A24A]"
-                        : "bg-white/10 text-white"
-                    }`}
-                  >
-                    <Icon size={19} />
+            return (
+              <a
+                key={product.title}
+                href={product.href}
+                className="group overflow-hidden rounded-xl border border-[#E2E7EA] bg-white shadow-[0_4px_16px_rgba(9,43,70,0.03)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(9,43,70,0.10)]"
+              >
+                <div className="relative h-[150px] overflow-hidden bg-[#DDE8E7]">
+                  <img
+                    src={product.image}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#092B46]/30 to-transparent" />
+                  <div className="absolute bottom-4 left-4 flex h-9 w-9 items-center justify-center rounded-lg bg-[#092B46]/95 text-white">
+                    <Icon size={17} />
                   </div>
-
-                  <div className="min-w-0 flex-1">
-                    <p
-                      className={`text-sm font-black ${
-                        selected ? "text-[#063F32]" : "text-white"
-                      }`}
-                    >
-                      {product.title}
-                    </p>
-
-                    <p
-                      className={`mt-1 text-xs ${
-                        selected ? "text-gray-500" : "text-white/40"
-                      }`}
-                    >
-                      {product.short}
-                    </p>
-                  </div>
-
-                  <span
-                    className={`text-[10px] font-black ${
-                      selected ? "text-[#9A762E]" : "text-white/20"
-                    }`}
-                  >
-                    {product.number}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* FEATURED PRODUCT */}
-          <div className="relative min-h-[460px] overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[#0B5142] to-[#063F32] p-8 sm:p-10">
-
-            <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border border-white/10" />
-            <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full border border-[#C9A24A]/20" />
-
-            <div className="relative flex h-full flex-col justify-between">
-
-              <div>
-                <div className="flex items-center justify-between">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10">
-                    <active.icon
-                      size={30}
-                      className="text-[#C9A24A]"
-                    />
-                  </div>
-
-                  <span className="text-6xl font-black text-white/[0.06]">
-                    {active.number}
-                  </span>
                 </div>
 
-                <p className="mt-10 text-[10px] font-black uppercase tracking-[0.25em] text-[#C9A24A]">
-                  Mayban Insurance
-                </p>
-
-                <h3 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
-                  {active.title}
-                </h3>
-
-                <p className="mt-5 max-w-[550px] text-sm leading-7 text-white/60">
-                  {active.description}
-                </p>
-              </div>
-
-              <div className="mt-10">
-                <a
-                  href="#quote"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#C9A24A] px-6 py-3.5 text-sm font-black text-[#063F32] transition hover:bg-[#e5ba61]"
-                >
-                  Get a Quote
-                  <ArrowRight size={17} />
-                </a>
-              </div>
-
-            </div>
-          </div>
+                <div className="p-5">
+                  <h3 className="text-[17px] font-serif font-bold leading-tight text-[#092B46]">
+                    {product.title}
+                  </h3>
+                  <p className="mt-3 text-xs leading-5 text-[#66788A]">
+                    {product.description}
+                  </p>
+                  <div className="mt-5 flex items-center gap-1.5 text-[11px] font-black text-[#0FA79C]">
+                    {product.link}
+                    <ArrowRight
+                      size={14}
+                      className="transition-transform group-hover:translate-x-1"
+                    />
+                  </div>
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
