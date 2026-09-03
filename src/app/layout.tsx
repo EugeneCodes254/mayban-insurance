@@ -13,9 +13,50 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mayban Insurance | Cover That Stands With You",
+  metadataBase: new URL("https://maybaninsurance.com"),
+  title: {
+    default: "Mayban Insurance Kenya | Motor, Health, Life & Business Insurance",
+    template: "%s | Mayban Insurance Kenya",
+  },
   description:
-    "Motor, health, life and business insurance solutions built for Kenyan families and enterprises.",
+    "Mayban Insurance provides motor, health, life, business, property and marine insurance solutions for individuals and businesses across Kenya.",
+  keywords: [
+    "Mayban Insurance",
+    "Mayban Insurance Kenya",
+    "insurance Kenya",
+    "motor insurance Kenya",
+    "health insurance Kenya",
+    "life insurance Kenya",
+    "business insurance Kenya",
+    "property insurance Kenya",
+    "marine insurance Kenya",
+  ],
+  alternates: {
+    canonical: "https://maybaninsurance.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    title: "Mayban Insurance Kenya | Insurance Solutions You Can Trust",
+    description:
+      "Explore motor, health, life, business, property and marine insurance solutions from Mayban Insurance Kenya.",
+    url: "https://maybaninsurance.com",
+    siteName: "Mayban Insurance",
+    locale: "en_KE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Mayban Insurance Kenya",
+    description:
+      "Motor, health, life, business, property and marine insurance solutions in Kenya.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
