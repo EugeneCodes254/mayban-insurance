@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  ArrowUpRight,
   Car,
   HeartPulse,
   LifeBuoy,
@@ -16,7 +17,8 @@ const products = [
       "Comprehensive and third-party cover with 24/7 roadside assistance and a nationwide garage network.",
     icon: Car,
     image:
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/10154857/pexels-photo-10154857.jpeg",
+    alt: "Vehicles travelling on a Nairobi highway in Kenya",
     href: "/?type=Motor#quote",
     link: "Explore Motor Cover",
   },
@@ -26,7 +28,8 @@ const products = [
       "Individual and family medical cover including inpatient, outpatient, maternity and dental.",
     icon: HeartPulse,
     image:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/37454249/pexels-photo-37454249.jpeg",
+    alt: "African female doctor in a modern clinic",
     href: "/?type=Health#quote",
     link: "Explore Health Cover",
   },
@@ -36,7 +39,8 @@ const products = [
       "Term life, endowment and education plans that secure your family's tomorrow, today.",
     icon: LifeBuoy,
     image:
-      "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/37249315/pexels-photo-37249315.jpeg",
+    alt: "African mother holding her baby in Nairobi",
     href: "/?type=Life#quote",
     link: "Explore Life Cover",
   },
@@ -46,7 +50,8 @@ const products = [
       "Fire, theft, liability and business interruption cover for SMEs and enterprises.",
     icon: Building2,
     image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/33569518/pexels-photo-33569518.jpeg",
+    alt: "African woman working at a Nairobi market business",
     href: "/?type=Business#quote",
     link: "Explore Business Cover",
   },
@@ -56,7 +61,8 @@ const products = [
       "Cargo and hull cover for imports, exports and vessels, including the cover required under Kenya's Marine Insurance Act.",
     icon: Ship,
     image:
-      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/32384462/pexels-photo-32384462.jpeg",
+    alt: "Container ship navigating waters off Mombasa, Kenya",
     href: "/?type=Business#quote",
     link: "Explore Marine Cover",
   },
@@ -66,7 +72,8 @@ const products = [
       "A guarantee that protects clients if a contractor fails to fulfil their obligations on a contracted project.",
     icon: FileCheck2,
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/30661413/pexels-photo-30661413.jpeg",
+    alt: "Construction workers on a Nairobi building project",
     href: "/?type=Business#quote",
     link: "Explore Performance Bonds",
   },
@@ -76,7 +83,8 @@ const products = [
       "Protects clients who make upfront payments to contractors or suppliers, guaranteeing a refund if obligations aren't met.",
     icon: HandCoins,
     image:
-      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/30661410/pexels-photo-30661410.jpeg",
+    alt: "Construction worker on a Nairobi project site",
     href: "/?type=Business#quote",
     link: "Explore Payment Guarantees",
   },
@@ -84,57 +92,79 @@ const products = [
 
 export function Products() {
   return (
-    <section id="products" className="bg-[#F8F7F3] py-20 sm:py-24">
-      <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
-        <div className="mx-auto max-w-[720px] text-center">
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#C9A24A]">
-            Our Cover
-          </p>
-          <h2 className="mt-4 text-4xl font-serif font-bold leading-[1.06] tracking-[-0.04em] text-[#063F32] sm:text-5xl lg:text-[56px]">
-            Insurance built around you
-          </h2>
-          <p className="mx-auto mt-5 max-w-[620px] text-[15px] leading-7 text-[#68736E]">
-            Our core lines of cover, each designed to be simple to understand
-            and quick to claim on.
-          </p>
+    <section id="products" className="bg-white py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-10">
+        <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+          <div className="max-w-[720px]">
+            <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.28em] text-[#087F6E]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#C9A24A]" />
+              Our insurance solutions
+            </div>
+            <h2 className="mt-4 font-serif text-[38px] font-bold leading-[1.04] tracking-[-0.04em] text-[#063F32] sm:text-5xl lg:text-[56px]">
+              Cover designed around real life.
+            </h2>
+            <p className="mt-5 max-w-[650px] text-[15px] leading-7 text-slate-500 sm:text-base">
+              From everyday protection to business continuity, choose cover that fits what you own, who you care for and where you&apos;re going.
+            </p>
+          </div>
+
+          <a
+            href="#quote"
+            className="inline-flex w-fit items-center gap-2 rounded-full bg-[#063F32] px-5 py-3 text-xs font-extrabold text-white shadow-[0_10px_25px_rgba(6,63,50,0.12)] transition hover:-translate-y-0.5 hover:bg-[#03271F]"
+          >
+            Talk to Mayban
+            <ArrowRight size={15} />
+          </a>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((product) => {
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {products.map((product, index) => {
             const Icon = product.icon;
+            const featured = index === 0;
 
             return (
               <a
                 key={product.title}
                 href={product.href}
-                className="group overflow-hidden rounded-[24px] border border-[#E6E2D8] bg-white shadow-[0_8px_25px_rgba(6,63,50,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(6,63,50,0.12)]"
+                className={`group overflow-hidden rounded-[28px] border bg-white shadow-[0_8px_28px_rgba(6,63,50,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_28px_65px_rgba(6,63,50,0.13)] ${
+                  featured ? "border-[#BFD8CF] lg:col-span-2 lg:grid lg:grid-cols-[1.05fr_0.95fr]" : "border-[#E5ECE8]"
+                }`}
               >
-                <div className="relative h-[205px] overflow-hidden bg-[#E9E5D9]">
+                <div className={`relative overflow-hidden bg-[#EAF2EE] ${featured ? "h-[255px] lg:h-full" : "h-[210px]"}`}>
                   <img
                     src={product.image}
-                    alt=""
+                    alt={product.alt}
                     loading="lazy"
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#063F32]/55 via-[#063F32]/10 to-transparent" />
-                  <div className="absolute bottom-4 left-4 flex h-9 w-9 items-center justify-center rounded-xl bg-[#063F32] text-white shadow-lg">
-                    <Icon size={17} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#03271F]/65 via-[#063F32]/5 to-transparent" />
+                  <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/15 bg-[#03271F]/60 px-3 py-1.5 text-[9px] font-black uppercase tracking-[0.15em] text-white backdrop-blur-md">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#E3C66B]" />
+                    {featured ? "Most popular" : "Mayban cover"}
+                  </div>
+                  <div className="absolute bottom-5 left-5 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-[#063F32] shadow-xl">
+                    <Icon size={19} />
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-[20px] font-serif font-bold leading-tight text-[#063F32]">
-                    {product.title}
-                  </h3>
-                  <p className="mt-3 text-xs leading-5 text-[#68736E]">
-                    {product.description}
-                  </p>
-                  <div className="mt-5 flex items-center gap-1.5 text-[11px] font-black text-[#C9A24A]">
+                <div className="flex flex-col justify-between p-6 sm:p-7">
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#C9A24A]">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <h3 className="mt-2 font-serif text-[22px] font-bold leading-tight text-[#063F32]">
+                      {product.title}
+                    </h3>
+                    <p className="mt-3 text-xs leading-5 text-slate-500">
+                      {product.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-7 flex items-center justify-between border-t border-[#EDF1EF] pt-4 text-[11px] font-black text-[#087F6E]">
                     {product.link}
-                    <ArrowRight
-                      size={14}
-                      className="transition-transform group-hover:translate-x-1"
-                    />
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F1F7F4] transition group-hover:bg-[#063F32] group-hover:text-white">
+                      <ArrowUpRight size={15} className="transition group-hover:rotate-45" />
+                    </span>
                   </div>
                 </div>
               </a>
