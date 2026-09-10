@@ -3,6 +3,10 @@ import {
   ShieldCheck,
   Phone,
   CheckCircle2,
+  Sparkles,
+  CarFront,
+  HeartPulse,
+  Building2,
 } from "lucide-react";
 
 import { QuoteForm } from "./QuoteForm";
@@ -10,101 +14,144 @@ import { QuoteForm } from "./QuoteForm";
 export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-[#063F32] text-white">
-      <div className="pointer-events-none absolute -right-44 -top-44 h-[620px] w-[620px] rounded-full bg-[#C9A24A]/12 blur-[110px]" />
-      <div className="pointer-events-none absolute -bottom-52 left-1/3 h-[520px] w-[520px] rounded-full bg-[#C9A24A]/8 blur-[110px]" />
-      <div className="pointer-events-none absolute right-[-180px] top-[120px] h-[460px] w-[700px] rounded-[50%] border border-white/10 rotate-[16deg]" />
-      <div className="pointer-events-none absolute right-[-230px] top-[175px] h-[460px] w-[700px] rounded-[50%] border border-[#C9A24A]/20 rotate-[16deg]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_20%,rgba(201,162,74,0.18),transparent_30%),radial-gradient(circle_at_18%_85%,rgba(8,127,110,0.22),transparent_32%)]" />
+      <div className="pointer-events-none absolute -right-32 top-16 h-[620px] w-[620px] rounded-full border border-white/8" />
+      <div className="pointer-events-none absolute -right-20 top-28 h-[520px] w-[520px] rounded-full border border-[#C9A24A]/15" />
+      <div className="pointer-events-none absolute left-[-220px] bottom-[-260px] h-[520px] w-[520px] rounded-full bg-[#087F6E]/20 blur-[100px]" />
 
-      <div className="relative mx-auto grid max-w-[1280px] gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:gap-16 lg:py-[82px]">
-        <div className="max-w-[700px]">
-          <div className="mb-7 inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.25em] text-[#E3C66B]">
-            <ShieldCheck size={15} />
-            IRA Licensed Insurance Agency
+      <div className="relative mx-auto max-w-[1320px] px-5 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-18 lg:px-10 lg:pb-20 lg:pt-20">
+        <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
+          <div className="max-w-[700px]">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E3C66B]/25 bg-white/5 px-3.5 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#E3C66B] backdrop-blur-sm">
+              <ShieldCheck size={14} />
+              IRA Licensed Insurance Agency
+            </div>
+
+            <h1 className="max-w-[760px] font-serif text-[46px] font-bold leading-[0.99] tracking-[-0.045em] sm:text-[60px] lg:text-[76px]">
+              Protect what matters.
+              <span className="mt-3 block text-[#E3C66B]">Live with confidence.</span>
+            </h1>
+
+            <p className="mt-7 max-w-[620px] text-[15px] leading-7 text-white/72 sm:text-[17px] sm:leading-8">
+              Tailored insurance solutions for Kenyan individuals, families and
+              businesses — with clear advice, responsive claims support and a
+              team you can reach when it matters.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#quote"
+                className="inline-flex items-center gap-2 rounded-full bg-[#C9A24A] px-6 py-3.5 text-sm font-extrabold text-[#03271F] shadow-[0_14px_35px_rgba(201,162,74,0.22)] transition hover:-translate-y-0.5 hover:bg-[#E3C66B]"
+              >
+                Get a Free Quote
+                <ArrowRight size={17} />
+              </a>
+
+              <a
+                href="#products"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition hover:border-white/40 hover:bg-white/10"
+              >
+                Explore Cover
+                <ArrowRight size={16} />
+              </a>
+            </div>
+
+            <div className="mt-9 grid max-w-[650px] grid-cols-2 gap-3 sm:grid-cols-4">
+              {[
+                ["7+", "Insurance solutions"],
+                ["Kenya", "Nationwide support"],
+                ["IRA", "Licensed agency"],
+                ["24/7", "Claims guidance"],
+              ].map(([value, label]) => (
+                <div key={label} className="border-l border-white/12 pl-3.5 first:border-l-0 first:pl-0 sm:first:border-l sm:first:pl-3.5">
+                  <p className="text-lg font-black text-white">{value}</p>
+                  <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/45">{label}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-[11px] font-semibold text-white/55">
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 size={15} className="text-[#C9A24A]" />
+                Straightforward advice
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 size={15} className="text-[#C9A24A]" />
+                Responsive claims
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 size={15} className="text-[#C9A24A]" />
+                M-Pesa premium payments
+              </span>
+            </div>
           </div>
 
-          <h1 className="max-w-[700px] font-serif text-[45px] font-bold leading-[1.03] tracking-[-0.035em] sm:text-[58px] lg:text-[70px]">
-            Cover that stands with you,
-            <span className="mt-2 block text-white">
-              wherever life in Kenya takes you.
-            </span>
-          </h1>
+          <div id="quote" className="relative mx-auto w-full max-w-[520px] lg:ml-auto">
+            <div className="absolute -inset-8 rounded-[48px] bg-[#C9A24A]/10 blur-3xl" />
 
-          <p className="mt-7 max-w-[610px] text-[15px] leading-7 text-white/75 sm:text-[17px] sm:leading-8">
-            Motor, health, life and business insurance built for Kenyan
-            families and enterprises — straightforward policies, responsive
-            claims, and support that speaks your language.
-          </p>
+            <div className="pointer-events-none absolute -right-5 -top-7 hidden w-[190px] rounded-3xl border border-white/10 bg-[#03271F]/80 p-4 shadow-2xl backdrop-blur-xl sm:block mayban-float">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#C9A24A]/15">
+                  <Sparkles size={18} className="text-[#E3C66B]" />
+                </span>
+                <div>
+                  <p className="text-xs font-extrabold text-white">Made for Kenya</p>
+                  <p className="mt-0.5 text-[10px] text-white/45">Practical protection</p>
+                </div>
+              </div>
+            </div>
 
-          <div className="mt-9 flex flex-wrap gap-4">
+            <div className="pointer-events-none absolute -bottom-7 -left-5 hidden w-[190px] rounded-3xl border border-white/10 bg-white p-4 text-[#063F32] shadow-2xl sm:block">
+              <p className="text-[9px] font-black uppercase tracking-[0.18em] text-[#C9A24A]">Cover at a glance</p>
+              <div className="mt-3 grid grid-cols-3 gap-2">
+                {[CarFront, HeartPulse, Building2].map((Icon, index) => (
+                  <span key={index} className="flex h-10 items-center justify-center rounded-xl bg-[#F1F7F4]">
+                    <Icon size={17} className="text-[#087F6E]" />
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative rounded-[30px] border border-white/10 bg-white p-5 text-[#063F32] shadow-[0_35px_100px_rgba(0,0,0,0.28)] sm:p-7">
+              <div className="mb-6 flex items-start justify-between gap-5">
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#C9A24A]">
+                    Start here
+                  </p>
+                  <h2 className="mt-2 font-serif text-[28px] font-bold tracking-[-0.025em] text-[#063F32] sm:text-[31px]">
+                    Get your free quote
+                  </h2>
+                  <p className="mt-1.5 text-xs leading-5 text-slate-500">
+                    A simple first step. No obligation.
+                  </p>
+                </div>
+
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#063F32] shadow-sm">
+                  <ShieldCheck size={21} className="text-[#C9A24A]" />
+                </div>
+              </div>
+
+              <QuoteForm />
+            </div>
+
             <a
-              href="#quote"
-              className="inline-flex items-center gap-2 rounded-full bg-[#C9A24A] px-7 py-4 text-sm font-extrabold text-white shadow-[0_14px_35px_rgba(201,162,74,0.24)] transition hover:-translate-y-0.5 hover:bg-[#B88E35]"
+              href="tel:+254733669260"
+              className="relative mt-4 flex items-center justify-center gap-2 text-[11px] font-semibold text-white/50 transition hover:text-white/80"
             >
-              Explore Cover
-              <ArrowRight size={17} />
+              <Phone size={13} />
+              Need help? +254 733 669 260
             </a>
-
-            <a
-              href="#claims"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-4 text-sm font-bold text-white transition hover:border-white/60 hover:bg-white/5"
-            >
-              How Claims Work
-              <ArrowRight size={16} />
-            </a>
-          </div>
-
-          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5 border-t border-white/10 pt-7">
-            <div>
-              <p className="text-lg font-black text-white">7+</p>
-              <p className="mt-1 text-[11px] text-white/55">Insurance solutions</p>
-            </div>
-
-            <div>
-              <p className="text-lg font-black text-white">24/7</p>
-              <p className="mt-1 text-[11px] text-white/55">Claims support</p>
-            </div>
-
-            <div>
-              <p className="text-lg font-black text-white">Kenya</p>
-              <p className="mt-1 text-[11px] text-white/55">Nationwide coverage</p>
-            </div>
-
-            <div className="flex items-center gap-2 text-[11px] text-white/65">
-              <CheckCircle2 size={17} className="text-[#C9A24A]" />
-              M-Pesa premium payments
-            </div>
           </div>
         </div>
 
-        <div id="quote" className="relative lg:ml-auto lg:w-full lg:max-w-[500px]">
-          <div className="absolute -inset-5 rounded-[38px] bg-[#C9A24A]/10 blur-2xl" />
-
-          <div className="relative rounded-[28px] border border-[#E5E0D2] bg-white p-6 text-[#063F32] shadow-[0_30px_80px_rgba(3,39,31,0.22)] sm:p-7">
-            <div className="mb-6 flex items-start justify-between gap-5">
-              <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#C9A24A]">
-                  Free Quote
-                </p>
-                <h2 className="mt-2 font-serif text-[28px] font-bold tracking-tight text-[#063F32] sm:text-[31px]">
-                  Get your free quote
-                </h2>
-                <p className="mt-1.5 text-xs leading-5 text-slate-500">
-                  Takes less than 2 minutes. No obligation.
-                </p>
-              </div>
-
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#063F32]">
-                <ShieldCheck size={21} className="text-[#C9A24A]" />
-              </div>
-            </div>
-
-            <QuoteForm />
-          </div>
-
-          <div className="mt-4 flex items-center justify-center gap-2 text-[11px] text-white/45">
-            <Phone size={13} />
-            Need help? Call +254 733 669 260
-          </div>
+        <div className="mt-14 hidden items-center gap-5 border-t border-white/10 pt-5 text-[10px] font-bold uppercase tracking-[0.18em] text-white/35 lg:flex">
+          <span>Personal protection</span>
+          <span className="h-1 w-1 rounded-full bg-[#C9A24A]" />
+          <span>Family security</span>
+          <span className="h-1 w-1 rounded-full bg-[#C9A24A]" />
+          <span>Business continuity</span>
+          <span className="h-1 w-1 rounded-full bg-[#C9A24A]" />
+          <span>Long-term peace of mind</span>
         </div>
       </div>
     </section>
