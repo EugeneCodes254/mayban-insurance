@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { TrustStrip } from "@/components/TrustStrip";
 import { FindCover } from "@/components/FindCover";
 import { About } from "@/components/About";
 import { Products } from "@/components/Products";
@@ -8,6 +9,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
+import { MobileActions } from "@/components/MobileActions";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -39,6 +41,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <TrustStrip />
         <FindCover />
         <About />
         <Products />
@@ -48,6 +51,7 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
+      <MobileActions />
     </>
   );
 }
