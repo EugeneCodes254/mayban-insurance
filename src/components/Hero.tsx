@@ -3,7 +3,6 @@ import {
   ShieldCheck,
   Phone,
   CheckCircle2,
-  Sparkles,
 } from "lucide-react";
 
 import { QuoteForm } from "./QuoteForm";
@@ -85,18 +84,6 @@ export function Hero() {
 
           <div id="quote" className="relative mx-auto w-full max-w-[500px] lg:ml-auto">
             <div className="absolute -inset-8 rounded-[48px] bg-[#C9A24A]/10 blur-3xl" />
-
-            <div className="pointer-events-none absolute -right-4 -top-6 hidden w-[180px] rounded-3xl border border-white/10 bg-[#03271F]/90 p-4 shadow-2xl backdrop-blur-xl sm:block mayban-float">
-              <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#C9A24A]/15">
-                  <Sparkles size={18} className="text-[#E3C66B]" />
-                </span>
-                <div>
-                  <p className="text-xs font-extrabold text-white">Made for Kenya</p>
-                  <p className="mt-0.5 text-[10px] text-white/45">Practical protection</p>
-                </div>
-              </div>
-            </div>
 
             <div className="relative rounded-[30px] border border-white/10 bg-white p-5 text-[#063F32] shadow-[0_35px_100px_rgba(0,0,0,0.28)] sm:p-7">
               <div className="mb-6 flex items-start justify-between gap-5">
