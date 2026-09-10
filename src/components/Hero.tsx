@@ -1,24 +1,69 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
-  ShieldCheck,
-  Phone,
   CheckCircle2,
+  Phone,
+  ShieldCheck,
+  Sparkles,
 } from "lucide-react";
 
 import { QuoteForm } from "./QuoteForm";
 
+const heroSlides = [
+  {
+    image:
+      "https://images.pexels.com/photos/16679358/pexels-photo-16679358.jpeg",
+    label: "Family & Life",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/10154857/pexels-photo-10154857.jpeg",
+    label: "Motor & Travel",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/33569518/pexels-photo-33569518.jpeg",
+    label: "Business Protection",
+  },
+];
+
 export function Hero() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % heroSlides.length);
+    }, 5000);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
   return (
     <section id="home" className="relative overflow-hidden bg-[#063F32] text-white">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_20%,rgba(201,162,74,0.18),transparent_30%),radial-gradient(circle_at_18%_85%,rgba(8,127,110,0.22),transparent_32%)]" />
+      {heroSlides.map((slide, index) => (
+        <div
+          key={slide.image}
+          aria-hidden="true"
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+          style={{
+            backgroundImage: `url(${slide.image})`,
+            opacity: activeSlide === index ? 1 : 0,
+          }}
+        />
+      ))}
+
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(3,39,31,0.98)_0%,rgba(3,39,31,0.91)_31%,rgba(3,39,31,0.57)_58%,rgba(3,39,31,0.68)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(3,39,31,0.25)_0%,rgba(3,39,31,0.06)_45%,rgba(3,39,31,0.72)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_76%_22%,rgba(201,162,74,0.18),transparent_28%),radial-gradient(circle_at_18%_85%,rgba(8,127,110,0.24),transparent_32%)]" />
       <div className="pointer-events-none absolute -right-32 top-16 h-[620px] w-[620px] rounded-full border border-white/8" />
       <div className="pointer-events-none absolute -right-20 top-28 h-[520px] w-[520px] rounded-full border border-[#C9A24A]/15" />
-      <div className="pointer-events-none absolute left-[-220px] bottom-[-260px] h-[520px] w-[520px] rounded-full bg-[#087F6E]/20 blur-[100px]" />
 
       <div className="relative mx-auto max-w-[1320px] px-5 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-18 lg:px-10 lg:pb-20 lg:pt-20">
         <div className="grid items-center gap-12 lg:grid-cols-[1.04fr_0.86fr] lg:gap-14">
           <div className="max-w-[700px]">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E3C66B]/25 bg-white/5 px-3.5 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#E3C66B] backdrop-blur-sm">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E3C66B]/25 bg-[#03271F]/35 px-3.5 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#E3C66B] backdrop-blur-sm">
               <ShieldCheck size={14} />
               IRA Licensed Insurance Agency
             </div>
@@ -28,7 +73,7 @@ export function Hero() {
               <span className="mt-3 block text-[#E3C66B]">Live with confidence.</span>
             </h1>
 
-            <p className="mt-7 max-w-[620px] text-[15px] leading-7 text-white/72 sm:text-[17px] sm:leading-8">
+            <p className="mt-7 max-w-[620px] text-[15px] leading-7 text-white/78 sm:text-[17px] sm:leading-8">
               Tailored insurance solutions for Kenyan individuals, families and
               businesses — with clear advice, responsive claims support and a
               team you can reach when it matters.
@@ -59,14 +104,19 @@ export function Hero() {
                 ["IRA", "Licensed agency"],
                 ["24/7", "Claims guidance"],
               ].map(([value, label]) => (
-                <div key={label} className="border-l border-white/12 pl-3.5 first:border-l-0 first:pl-0 sm:first:border-l sm:first:pl-3.5">
+                <div
+                  key={label}
+                  className="border-l border-white/12 pl-3.5 first:border-l-0 first:pl-0 sm:first:border-l sm:first:pl-3.5"
+                >
                   <p className="text-lg font-black text-white">{value}</p>
-                  <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/45">{label}</p>
+                  <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/55">
+                    {label}
+                  </p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-[11px] font-semibold text-white/55">
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-[11px] font-semibold text-white/65">
               <span className="inline-flex items-center gap-2">
                 <CheckCircle2 size={15} className="text-[#C9A24A]" />
                 Straightforward advice
@@ -82,10 +132,22 @@ export function Hero() {
             </div>
           </div>
 
-          <div id="quote" className="relative mx-auto w-full max-w-[500px] lg:ml-auto">
+          <div id="quote" className="relative mx-auto w-full max-w-[500px] pt-12 lg:ml-auto">
             <div className="absolute -inset-8 rounded-[48px] bg-[#C9A24A]/10 blur-3xl" />
 
-            <div className="relative rounded-[30px] border border-white/10 bg-white p-5 text-[#063F32] shadow-[0_35px_100px_rgba(0,0,0,0.28)] sm:p-7">
+            <div className="pointer-events-none absolute right-2 top-0 z-20 hidden w-[190px] rounded-3xl border border-white/10 bg-[#03271F]/95 p-3.5 shadow-2xl backdrop-blur-xl sm:block">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#C9A24A]/15">
+                  <Sparkles size={18} className="text-[#E3C66B]" />
+                </span>
+                <div>
+                  <p className="text-xs font-extrabold text-white">Made for Kenya</p>
+                  <p className="mt-0.5 text-[10px] text-white/45">Practical protection</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative z-10 rounded-[30px] border border-white/10 bg-white p-5 text-[#063F32] shadow-[0_35px_100px_rgba(0,0,0,0.30)] sm:p-7">
               <div className="mb-6 flex items-start justify-between gap-5">
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#C9A24A]">
@@ -109,7 +171,7 @@ export function Hero() {
 
             <a
               href="tel:+254733669260"
-              className="relative mt-5 flex items-center justify-center gap-2 text-[11px] font-semibold text-white/60 transition hover:text-white"
+              className="relative z-10 mt-5 flex items-center justify-center gap-2 text-[11px] font-semibold text-white/70 transition hover:text-white"
             >
               <Phone size={13} />
               Need help? +254 733 669 260
@@ -117,14 +179,31 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-14 hidden items-center gap-5 border-t border-white/10 pt-5 text-[10px] font-bold uppercase tracking-[0.18em] text-white/35 lg:flex">
-          <span>Personal protection</span>
-          <span className="h-1 w-1 rounded-full bg-[#C9A24A]" />
-          <span>Family security</span>
-          <span className="h-1 w-1 rounded-full bg-[#C9A24A]" />
-          <span>Business continuity</span>
-          <span className="h-1 w-1 rounded-full bg-[#C9A24A]" />
-          <span>Long-term peace of mind</span>
+        <div className="mt-8 flex items-center justify-between gap-4 lg:mt-10">
+          <div className="flex items-center gap-2" aria-label="Hero slides">
+            {heroSlides.map((slide, index) => (
+              <button
+                key={slide.label}
+                type="button"
+                aria-label={`Show ${slide.label} slide`}
+                aria-current={activeSlide === index}
+                onClick={() => setActiveSlide(index)}
+                className={`h-1.5 rounded-full transition-all duration-500 ${
+                  activeSlide === index ? "w-9 bg-[#E3C66B]" : "w-2 bg-white/35 hover:bg-white/60"
+                }`}
+              />
+            ))}
+          </div>
+
+          <div className="hidden items-center gap-5 border-t border-white/10 pt-5 text-[10px] font-bold uppercase tracking-[0.18em] text-white/40 sm:flex">
+            <span>Personal protection</span>
+            <span className="h-1 w-1 rounded-full bg-[#C9A24A]" />
+            <span>Family security</span>
+            <span className="h-1 w-1 rounded-full bg-[#C9A24A]" />
+            <span>Business continuity</span>
+            <span className="h-1 w-1 rounded-full bg-[#C9A24A]" />
+            <span>Long-term peace of mind</span>
+          </div>
         </div>
       </div>
     </section>
