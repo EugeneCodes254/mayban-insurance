@@ -7,6 +7,7 @@ import { About } from "@/components/About";
 import { Products } from "@/components/Products";
 import { PremiumCalculator } from "@/components/PremiumCalculator";
 import { MotorInsuranceJourney } from "@/components/MotorInsuranceJourney";
+import { ClaimsCentre } from "@/components/ClaimsCentre";
 import { ClaimsProcess } from "@/components/ClaimsProcess";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
@@ -23,25 +24,14 @@ const organizationSchema = {
   "url": "https://maybaninsurance.com",
   "telephone": "+254733669260",
   "email": "info@maybaninsurance.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Ndovu Close, Ndovu Road, Karen",
-    "addressLocality": "Nairobi",
-    "addressCountry": "KE"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "Kenya"
-  }
+  "address": { "@type": "PostalAddress", "streetAddress": "Ndovu Close, Ndovu Road, Karen", "addressLocality": "Nairobi", "addressCountry": "KE" },
+  "areaServed": { "@type": "Country", "name": "Kenya" }
 };
 
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
+      <script dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <Navbar />
       <main>
         <Hero />
@@ -52,6 +42,7 @@ export default function Home() {
         <Products />
         <PremiumCalculator />
         <MotorInsuranceJourney />
+        <ClaimsCentre />
         <ClaimsProcess />
         <Testimonials />
         <FAQ />
