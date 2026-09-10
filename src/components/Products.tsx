@@ -17,7 +17,8 @@ const products = [
       "Comprehensive and third-party cover with 24/7 roadside assistance and a nationwide garage network.",
     icon: Car,
     image:
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/10154857/pexels-photo-10154857.jpeg",
+    alt: "Vehicles travelling on a Nairobi highway in Kenya",
     href: "/?type=Motor#quote",
     link: "Explore Motor Cover",
   },
@@ -27,7 +28,8 @@ const products = [
       "Individual and family medical cover including inpatient, outpatient, maternity and dental.",
     icon: HeartPulse,
     image:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/37454249/pexels-photo-37454249.jpeg",
+    alt: "African female doctor in a modern clinic",
     href: "/?type=Health#quote",
     link: "Explore Health Cover",
   },
@@ -37,7 +39,8 @@ const products = [
       "Term life, endowment and education plans that secure your family's tomorrow, today.",
     icon: LifeBuoy,
     image:
-      "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/37249315/pexels-photo-37249315.jpeg",
+    alt: "African mother holding her baby in Nairobi",
     href: "/?type=Life#quote",
     link: "Explore Life Cover",
   },
@@ -47,7 +50,8 @@ const products = [
       "Fire, theft, liability and business interruption cover for SMEs and enterprises.",
     icon: Building2,
     image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/33569518/pexels-photo-33569518.jpeg",
+    alt: "African woman working at a Nairobi market business",
     href: "/?type=Business#quote",
     link: "Explore Business Cover",
   },
@@ -57,7 +61,8 @@ const products = [
       "Cargo and hull cover for imports, exports and vessels, including the cover required under Kenya's Marine Insurance Act.",
     icon: Ship,
     image:
-      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/32384462/pexels-photo-32384462.jpeg",
+    alt: "Container ship navigating waters off Mombasa, Kenya",
     href: "/?type=Business#quote",
     link: "Explore Marine Cover",
   },
@@ -67,7 +72,8 @@ const products = [
       "A guarantee that protects clients if a contractor fails to fulfil their obligations on a contracted project.",
     icon: FileCheck2,
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/30661413/pexels-photo-30661413.jpeg",
+    alt: "Construction workers on a Nairobi building project",
     href: "/?type=Business#quote",
     link: "Explore Performance Bonds",
   },
@@ -77,7 +83,8 @@ const products = [
       "Protects clients who make upfront payments to contractors or suppliers, guaranteeing a refund if obligations aren't met.",
     icon: HandCoins,
     image:
-      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/30661410/pexels-photo-30661410.jpeg",
+    alt: "Construction worker on a Nairobi project site",
     href: "/?type=Business#quote",
     link: "Explore Payment Guarantees",
   },
@@ -126,7 +133,7 @@ export function Products() {
                 <div className={`relative overflow-hidden bg-[#EAF2EE] ${featured ? "h-[255px] lg:h-full" : "h-[210px]"}`}>
                   <img
                     src={product.image}
-                    alt=""
+                    alt={product.alt}
                     loading="lazy"
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
