@@ -26,29 +26,29 @@ export function Navbar() {
 
   return (
     <header
-      className={`left-0 top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "fixed border-b border-slate-200/80 bg-white/95 shadow-[0_8px_30px_rgba(3,39,31,0.10)] backdrop-blur-xl"
-          : "absolute border-b border-white/10 bg-transparent"
+          ? "border-b border-slate-200/80 bg-white/95 shadow-[0_8px_30px_rgba(3,39,31,0.07)] backdrop-blur-xl"
+          : "border-b border-white/10 bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-[76px] max-w-[1320px] items-center justify-between px-5 sm:px-8 lg:px-10">
+      <div className="mx-auto flex h-[68px] max-w-[1320px] items-center justify-between px-5 sm:h-[72px] sm:px-8 lg:px-10">
         <a href="#home" onClick={closeMenu} className="flex items-center" aria-label="Mayban Insurance home">
           <img
             src="/images/mayban-logo.png"
             alt="Mayban Insurance"
-            className={`h-[48px] w-auto object-contain sm:h-[52px] ${
-              scrolled ? "" : "brightness-0 invert"
+            className={`h-[43px] w-auto object-contain sm:h-[47px] ${
+              scrolled ? "" : "drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)]"
             }`}
           />
         </a>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-0.5 lg:flex">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`group inline-flex items-center gap-1 rounded-full px-4 py-2.5 text-[13px] font-bold transition ${
+              className={`group inline-flex items-center gap-1 rounded-full px-3.5 py-2.5 text-[12px] font-bold transition ${
                 scrolled
                   ? "text-slate-600 hover:bg-[#F1F7F4] hover:text-[#063F32]"
                   : "text-white/90 hover:bg-white/10 hover:text-white"
@@ -56,37 +56,31 @@ export function Navbar() {
             >
               {link.label}
               {link.dropdown && (
-                <ChevronDown size={14} className="transition group-hover:rotate-180" />
+                <ChevronDown size={13} className="transition group-hover:rotate-180" />
               )}
             </a>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <a
             href="tel:+254733669260"
-            className={`flex items-center gap-2 rounded-full px-3 py-2 text-[13px] font-bold transition ${
-              scrolled
-                ? "text-slate-600 hover:text-[#063F32]"
-                : "text-white/90 hover:text-white"
+            className={`flex items-center gap-2 rounded-full px-2.5 py-2 text-[12px] font-bold transition ${
+              scrolled ? "text-slate-600 hover:text-[#063F32]" : "text-white/90 hover:text-white"
             }`}
           >
-            <span
-              className={`flex h-8 w-8 items-center justify-center rounded-full ${
-                scrolled ? "bg-[#EEF6F2]" : "border border-white/15 bg-white/10 backdrop-blur-sm"
-              }`}
-            >
-              <Phone size={14} className={scrolled ? "text-[#087F6E]" : "text-[#E3C66B]"} />
+            <span className={`flex h-7 w-7 items-center justify-center rounded-full ${scrolled ? "bg-[#EEF6F2]" : "bg-white/12"}`}>
+              <Phone size={13} className={scrolled ? "text-[#087F6E]" : "text-[#E3C66B]"} />
             </span>
             +254 733 669 260
           </a>
 
           <a
             href="#quote"
-            className="inline-flex items-center gap-2 rounded-full bg-[#C9A24A] px-5 py-3 text-[13px] font-extrabold text-[#03271F] shadow-[0_10px_25px_rgba(0,0,0,0.14)] transition hover:-translate-y-0.5 hover:bg-[#E3C66B]"
+            className="inline-flex items-center gap-2 rounded-full bg-[#C9A24A] px-4.5 py-2.5 text-[12px] font-extrabold text-[#03271F] shadow-[0_8px_22px_rgba(0,0,0,0.12)] transition hover:-translate-y-0.5 hover:bg-[#E3C66B]"
           >
             Get a Quote
-            <ArrowRight size={15} />
+            <ArrowRight size={14} />
           </a>
         </div>
 
@@ -95,18 +89,18 @@ export function Navbar() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen(!open)}
-          className={`flex h-11 w-11 items-center justify-center rounded-full border shadow-sm transition lg:hidden ${
+          className={`flex h-10 w-10 items-center justify-center rounded-full border lg:hidden ${
             scrolled
-              ? "border-slate-200 bg-white text-[#063F32] hover:border-[#C9A24A]"
-              : "border-white/20 bg-white/10 text-white backdrop-blur-sm hover:border-white/40"
+              ? "border-slate-200 bg-white text-[#063F32] shadow-sm"
+              : "border-white/20 bg-black/10 text-white backdrop-blur-sm"
           }`}
         >
-          {open ? <X size={21} /> : <Menu size={21} />}
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-slate-100 bg-white shadow-[0_20px_40px_rgba(3,39,31,0.12)] lg:hidden">
+        <div className="border-t border-slate-100 bg-white shadow-[0_20px_40px_rgba(3,39,31,0.08)] lg:hidden">
           <nav className="mx-auto flex max-w-[1320px] flex-col px-5 py-3 sm:px-8">
             {links.map((link) => (
               <a
