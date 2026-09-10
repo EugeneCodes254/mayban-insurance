@@ -32,12 +32,12 @@ export function Navbar() {
           : "border-b border-white/10 bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-[68px] max-w-[1320px] items-center justify-between px-5 sm:h-[72px] sm:px-8 lg:px-10">
+      <div className="mx-auto flex h-[76px] max-w-[1320px] items-center justify-between px-5 sm:h-[80px] sm:px-8 lg:px-10">
         <a href="#home" onClick={closeMenu} className="flex items-center" aria-label="Mayban Insurance home">
           <img
             src="/images/mayban-logo.png"
             alt="Mayban Insurance"
-            className={`h-[43px] w-auto object-contain sm:h-[47px] ${
+            className={`h-[52px] w-auto object-contain sm:h-[58px] ${
               scrolled ? "" : "drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)]"
             }`}
           />
