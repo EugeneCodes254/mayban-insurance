@@ -6,6 +6,7 @@ import { ProtectionPlanner } from "@/components/ProtectionPlanner";
 import { About } from "@/components/About";
 import { Products } from "@/components/Products";
 import { PremiumCalculator } from "@/components/PremiumCalculator";
+import { MotorInsuranceJourney } from "@/components/MotorInsuranceJourney";
 import { ClaimsProcess } from "@/components/ClaimsProcess";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
@@ -50,6 +51,7 @@ export default function Home() {
         <About />
         <Products />
         <PremiumCalculator />
+        <MotorInsuranceJourney />
         <ClaimsProcess />
         <Testimonials />
         <FAQ />
