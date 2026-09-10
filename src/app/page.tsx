@@ -5,6 +5,7 @@ import { FindCover } from "@/components/FindCover";
 import { ProtectionPlanner } from "@/components/ProtectionPlanner";
 import { About } from "@/components/About";
 import { Products } from "@/components/Products";
+import { PremiumCalculator } from "@/components/PremiumCalculator";
 import { ClaimsProcess } from "@/components/ClaimsProcess";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
@@ -48,6 +49,7 @@ export default function Home() {
         <ProtectionPlanner />
         <About />
         <Products />
+        <PremiumCalculator />
         <ClaimsProcess />
         <Testimonials />
         <FAQ />
