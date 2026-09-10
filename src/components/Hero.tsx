@@ -4,9 +4,6 @@ import {
   Phone,
   CheckCircle2,
   Sparkles,
-  CarFront,
-  HeartPulse,
-  Building2,
 } from "lucide-react";
 
 import { QuoteForm } from "./QuoteForm";
@@ -20,7 +17,7 @@ export function Hero() {
       <div className="pointer-events-none absolute left-[-220px] bottom-[-260px] h-[520px] w-[520px] rounded-full bg-[#087F6E]/20 blur-[100px]" />
 
       <div className="relative mx-auto max-w-[1320px] px-5 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-18 lg:px-10 lg:pb-20 lg:pt-20">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.04fr_0.86fr] lg:gap-14">
           <div className="max-w-[700px]">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E3C66B]/25 bg-white/5 px-3.5 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#E3C66B] backdrop-blur-sm">
               <ShieldCheck size={14} />
@@ -86,10 +83,10 @@ export function Hero() {
             </div>
           </div>
 
-          <div id="quote" className="relative mx-auto w-full max-w-[520px] lg:ml-auto">
+          <div id="quote" className="relative mx-auto w-full max-w-[500px] lg:ml-auto">
             <div className="absolute -inset-8 rounded-[48px] bg-[#C9A24A]/10 blur-3xl" />
 
-            <div className="pointer-events-none absolute -right-5 -top-7 hidden w-[190px] rounded-3xl border border-white/10 bg-[#03271F]/80 p-4 shadow-2xl backdrop-blur-xl sm:block mayban-float">
+            <div className="pointer-events-none absolute -right-4 -top-6 hidden w-[180px] rounded-3xl border border-white/10 bg-[#03271F]/90 p-4 shadow-2xl backdrop-blur-xl sm:block mayban-float">
               <div className="flex items-center gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#C9A24A]/15">
                   <Sparkles size={18} className="text-[#E3C66B]" />
@@ -98,17 +95,6 @@ export function Hero() {
                   <p className="text-xs font-extrabold text-white">Made for Kenya</p>
                   <p className="mt-0.5 text-[10px] text-white/45">Practical protection</p>
                 </div>
-              </div>
-            </div>
-
-            <div className="pointer-events-none absolute -bottom-7 -left-5 hidden w-[190px] rounded-3xl border border-white/10 bg-white p-4 text-[#063F32] shadow-2xl sm:block">
-              <p className="text-[9px] font-black uppercase tracking-[0.18em] text-[#C9A24A]">Cover at a glance</p>
-              <div className="mt-3 grid grid-cols-3 gap-2">
-                {[CarFront, HeartPulse, Building2].map((Icon, index) => (
-                  <span key={index} className="flex h-10 items-center justify-center rounded-xl bg-[#F1F7F4]">
-                    <Icon size={17} className="text-[#087F6E]" />
-                  </span>
-                ))}
               </div>
             </div>
 
@@ -136,7 +122,7 @@ export function Hero() {
 
             <a
               href="tel:+254733669260"
-              className="relative mt-4 flex items-center justify-center gap-2 text-[11px] font-semibold text-white/50 transition hover:text-white/80"
+              className="relative mt-5 flex items-center justify-center gap-2 text-[11px] font-semibold text-white/60 transition hover:text-white"
             >
               <Phone size={13} />
               Need help? +254 733 669 260
