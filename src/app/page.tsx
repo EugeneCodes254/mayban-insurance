@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { TrustStrip } from "@/components/TrustStrip";
 import { FindCover } from "@/components/FindCover";
+import { ProtectionPlanner } from "@/components/ProtectionPlanner";
 import { About } from "@/components/About";
 import { Products } from "@/components/Products";
 import { ClaimsProcess } from "@/components/ClaimsProcess";
@@ -10,6 +11,7 @@ import { FAQ } from "@/components/FAQ";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { MobileActions } from "@/components/MobileActions";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -43,6 +45,7 @@ export default function Home() {
         <Hero />
         <TrustStrip />
         <FindCover />
+        <ProtectionPlanner />
         <About />
         <Products />
         <ClaimsProcess />
@@ -52,6 +55,7 @@ export default function Home() {
       </main>
       <Footer />
       <MobileActions />
+      <WhatsAppButton />
     </>
   );
 }
