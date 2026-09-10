@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  ArrowUpRight,
   Car,
   HeartPulse,
   LifeBuoy,
@@ -84,57 +85,79 @@ const products = [
 
 export function Products() {
   return (
-    <section id="products" className="bg-[#F8F7F3] py-20 sm:py-24">
-      <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
-        <div className="mx-auto max-w-[720px] text-center">
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-[#C9A24A]">
-            Our Cover
-          </p>
-          <h2 className="mt-4 text-4xl font-serif font-bold leading-[1.06] tracking-[-0.04em] text-[#063F32] sm:text-5xl lg:text-[56px]">
-            Insurance built around you
-          </h2>
-          <p className="mx-auto mt-5 max-w-[620px] text-[15px] leading-7 text-[#68736E]">
-            Our core lines of cover, each designed to be simple to understand
-            and quick to claim on.
-          </p>
+    <section id="products" className="bg-white py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-10">
+        <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+          <div className="max-w-[720px]">
+            <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.28em] text-[#087F6E]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#C9A24A]" />
+              Our insurance solutions
+            </div>
+            <h2 className="mt-4 font-serif text-[38px] font-bold leading-[1.04] tracking-[-0.04em] text-[#063F32] sm:text-5xl lg:text-[56px]">
+              Cover designed around real life.
+            </h2>
+            <p className="mt-5 max-w-[650px] text-[15px] leading-7 text-slate-500 sm:text-base">
+              From everyday protection to business continuity, choose cover that fits what you own, who you care for and where you&apos;re going.
+            </p>
+          </div>
+
+          <a
+            href="#quote"
+            className="inline-flex w-fit items-center gap-2 rounded-full bg-[#063F32] px-5 py-3 text-xs font-extrabold text-white shadow-[0_10px_25px_rgba(6,63,50,0.12)] transition hover:-translate-y-0.5 hover:bg-[#03271F]"
+          >
+            Talk to Mayban
+            <ArrowRight size={15} />
+          </a>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((product) => {
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {products.map((product, index) => {
             const Icon = product.icon;
+            const featured = index === 0;
 
             return (
               <a
                 key={product.title}
                 href={product.href}
-                className="group overflow-hidden rounded-[24px] border border-[#E6E2D8] bg-white shadow-[0_8px_25px_rgba(6,63,50,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(6,63,50,0.12)]"
+                className={`group overflow-hidden rounded-[28px] border bg-white shadow-[0_8px_28px_rgba(6,63,50,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_28px_65px_rgba(6,63,50,0.13)] ${
+                  featured ? "border-[#BFD8CF] lg:col-span-2 lg:grid lg:grid-cols-[1.05fr_0.95fr]" : "border-[#E5ECE8]"
+                }`}
               >
-                <div className="relative h-[205px] overflow-hidden bg-[#E9E5D9]">
+                <div className={`relative overflow-hidden bg-[#EAF2EE] ${featured ? "h-[255px] lg:h-full" : "h-[210px]"}`}>
                   <img
                     src={product.image}
                     alt=""
                     loading="lazy"
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#063F32]/55 via-[#063F32]/10 to-transparent" />
-                  <div className="absolute bottom-4 left-4 flex h-9 w-9 items-center justify-center rounded-xl bg-[#063F32] text-white shadow-lg">
-                    <Icon size={17} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#03271F]/65 via-[#063F32]/5 to-transparent" />
+                  <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/15 bg-[#03271F]/60 px-3 py-1.5 text-[9px] font-black uppercase tracking-[0.15em] text-white backdrop-blur-md">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#E3C66B]" />
+                    {featured ? "Most popular" : "Mayban cover"}
+                  </div>
+                  <div className="absolute bottom-5 left-5 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-[#063F32] shadow-xl">
+                    <Icon size={19} />
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-[20px] font-serif font-bold leading-tight text-[#063F32]">
-                    {product.title}
-                  </h3>
-                  <p className="mt-3 text-xs leading-5 text-[#68736E]">
-                    {product.description}
-                  </p>
-                  <div className="mt-5 flex items-center gap-1.5 text-[11px] font-black text-[#C9A24A]">
+                <div className="flex flex-col justify-between p-6 sm:p-7">
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#C9A24A]">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <h3 className="mt-2 font-serif text-[22px] font-bold leading-tight text-[#063F32]">
+                      {product.title}
+                    </h3>
+                    <p className="mt-3 text-xs leading-5 text-slate-500">
+                      {product.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-7 flex items-center justify-between border-t border-[#EDF1EF] pt-4 text-[11px] font-black text-[#087F6E]">
                     {product.link}
-                    <ArrowRight
-                      size={14}
-                      className="transition-transform group-hover:translate-x-1"
-                    />
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F1F7F4] transition group-hover:bg-[#063F32] group-hover:text-white">
+                      <ArrowUpRight size={15} className="transition group-hover:rotate-45" />
+                    </span>
                   </div>
                 </div>
               </a>
